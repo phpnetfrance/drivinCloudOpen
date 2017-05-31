@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.drivincloud.Activities.EditActivity">
+
+    <item
+        android:id="@+id/save"
+        android:title="Sauvegarder"
+        android:icon="@drawable/ic_save_black"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/quit"
+        android:title="Quitter"
+        android:icon="@drawable/ic_exit_to_app_black"
+        app:showAsAction="ifRoom" />
+
+</menu>

@@ -1,0 +1,15 @@
+<resources>
+
+        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+                <item name="windowActionModeOverlay">true</item>
+                <item name="colorPrimary">@color/colorPrimary</item>
+                <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                <item name="colorAccent">@color/colorAccent</item>
+                <item name="toolbarStyle">@style/myToolbarStyle</item>
+                <item name="toolbarNavigationButtonStyle">@style/myToolbarNavigationButtonStyle
+                </item>
+                <item name="colorButtonNormal">@color/colorAccent</item>
+                <item name="android:buttonStyle">@style/ButtonStyle</item>
+                <item name="android:colorEdgeEffect">@color/colorAccent</item>
+        </style>
+</resources>

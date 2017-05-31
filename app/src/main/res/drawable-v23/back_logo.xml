@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_chevron_left_black_24dp"
+        android:width="20dp"
+        android:height="34dp">
+    </item>
+    <item
+        android:drawable="@drawable/ic_drivincloud_home"
+        android:width="68dp"
+        android:height="34dp">
+    </item>
+</layer-list>

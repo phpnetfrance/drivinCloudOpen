@@ -1,0 +1,34 @@
+Applications Memory Usage (kB):
+Uptime: 198190 Realtime: 198190
+
+** MEMINFO in pid 2877 [phpnet.org.drivincloud_android] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    15012    14892        0        0    32768    25894     6873
+  Dalvik Heap    18207    18156        0        0    19087    15137     3950
+ Dalvik Other      360      360        0        0                           
+        Stack      348      348        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap     2838      184     1156        0                           
+    .apk mmap      307        0       96        0                           
+    .ttf mmap      137        0       96        0                           
+    .dex mmap     8868        0     8640        0                           
+    .oat mmap     4174        0     1580        0                           
+    .art mmap     4429     4140        4        0                           
+   Other mmap       77        4       44        0                           
+      Unknown      126      124        0        0                           
+        TOTAL    54887    38208    11620        0    51855    41031    10823
+ 
+ Objects
+               Views:      128         ViewRootImpl:        1
+         AppContexts:        3           Activities:        1
+              Assets:        2        AssetManagers:        2
+       Local Binders:       10        Proxy Binders:       18
+       Parcel memory:        2         Parcel count:       10
+    Death Recipients:        0      OpenSSL Sockets:        1
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 

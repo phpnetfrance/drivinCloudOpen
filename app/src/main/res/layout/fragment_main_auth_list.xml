@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/ic_drivincloud"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_list_title"
+            android:layout_gravity="top|center_horizontal"
+            android:textColor="@color/abc_secondary_text_material_light"
+            android:textStyle="bold"
+            android:textSize="@dimen/abc_text_size_title_material"
+            android:layout_marginBottom="12dp" />
+
+
+
+        <ListView
+            android:id="@+id/account_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/list_item_user"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp">
+
+
+
+        </ListView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:text="@string/no_account_registered"
+            android:id="@android:id/empty"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textStyle="italic"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</ScrollView>

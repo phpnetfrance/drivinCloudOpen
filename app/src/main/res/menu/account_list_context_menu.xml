@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Supprimer"
+        android:id="@+id/delete_context_menu"
+        android:icon="@drawable/ic_delete"></item>
+    <item
+        android:title="Éditer"
+        android:id="@+id/edit_context_menu"
+        android:icon="@drawable/ic_mode_edit_black_24dp"></item>
+</menu>

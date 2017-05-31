@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFE6E6E6</color>
+    <color name="colorPrimaryDark">#a18ab295</color>
+    <color name="colorAccent">#8ab295</color>
+    <color name="delete_message">#ef4545</color>
+</resources>

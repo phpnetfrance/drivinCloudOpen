@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">drivinCloud Open</string>
+    <string name="connexion">Connexion</string>
+    <string name="authError">Erreur de connexion</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Annuler</string>
+    <string name="download">Téléchargement en cours ...</string>
+    <string name="action_download">Télécharger</string>
+    <string name="move">Déplacer</string>
+    <string name="file">fichier</string>
+    <string name="directory">dossier</string>
+
+    <string name="sortLetter">lettre</string>
+    <string name="sortSize">taille</string>strings.xml
+    <string name="sortDate">date</string>
+    <string name="title_activity_image">ImageActivity</string>
+
+    <string name="empty_folder">Dossier vide</string>
+
+    <string name="dialog_choose_internal_external">Comment voulez-vous ouvrir ce fichier?</string>
+    <string name="dialog_choose_internal">dans drivinCloud Open</string>
+    <string name="dialog_choose_external">via une autre application</string>
+    <string-array name="dialog_choose_internal_external_choices">
+        <item>@string/dialog_choose_internal</item>
+        <item>@string/dialog_choose_external</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="dialog_choose_internal_external_remember">Toujours</string>
+    <string name="dialog_choose_internal_external_once">Cette fois seulement</string>
+    <string name="pref_open_file_title">Ouverture des fichiers</string>
+    <string name="title_activity_activity_params">Paramètres</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Syncs -->
+
+    <!-- Strings for the operation result codes -->
+
+    <!-- Example settings for Notifications -->
+
+    <string name="prefs_title">Préférences</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_login">Nom d\'utilisateur</string>
+    <string name="prompt_hostname">Nom d\'hôte</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="error_field_required">Champ requis</string>
+    <string name="user_list_title">Comptes enregistrés</string>
+    <string name="direct_connect">Nouvelle connexion</string>
+    <string name="no_account_registered">Vous n\'avez pas de compte enregistré pour le moment, vous pouvez utiliser l\'écran suivant pour vous connecter.</string>
+    <string name="dialog_confirm_logout">Ếtes vous sûr de vouloir vous déconnecter ?</string>
+    <string name="logout">Déconnection</string>
+    <string name="uploads_fragment_title">Transferts</string>
+    <string name="manual_uploads_tab">Manuels</string>
+    <string name="sync_uploads_tab">Synchronisation</string>
+    <string name="syncs_fragment_title">Sync</string>
+    <string name="fileAddedToUploadList">Le fichier %1$s est en cours de transfert</string>
+    <string name="filesAddedToUploadList">%1$s fichiers sont en cours de transfert</string>
+    <string name="error_file_not_found">Impossible de démarrer le transfert : le fichier %1$s est introuvable.</string>
+    <string name="progress_details">Temps écoulé : %1$s\nEnvoyé : %2$s (%3$s)</string>
+    <string name="progress_details_error">Erreur : %1$s</string>
+    <string name="progress_sync_details">Envoyé : %1$s (%2$s)\nÉtat : %3$s</string>
+    <string name="sync_nb_files">Nombre de fichiers à synchroniser : %1$s</string>
+    <string name="last_synchronisation">Dernière synchronisation :</string>
+    <string name="no_sync">Aucune synchronisation configurée. La synchronisation vous permet d\'envoyer un dossier particulier de votre téléphone vers votre serveur WebDAV à intervalle régulier. Vous pouvez par exemple synchroniser votre librairie de Photos afin de retrouver vos photos en ligne sur votre compte drivinCloud. Pour commencer, cliquez sur le bouton ci-dessous.</string>
+    <string name="add_new_sync">Nouvelle synchronisation</string>
+    <string name="name_already_taken">Ce nom de synchronisation est déjà utilisé</string>
+    <string name="nom_de_la_synchronisation">Nom de la synchronisation</string>
+    <string name="wifi">En WiFi</string>
+    <string name="wifi_data">En WiFi et mobilité</string>
+    <string name="fr_quence_de_synchronisation">Fréquence de synchronisation :</string>
+    <string name="_24h">24h</string>
+    <string name="_48h">48h</string>
+    <string name="_7j">7j</string>
+    <string name="_15j">15j</string>
+    <string name="_30j">30j</string>
+    <string name="never">Jamais</string>
+    <string name="dialog_2check_before_delete_sync">Êtes vous sûr de vouloir supprimer cette synchronisation?</string>
+    <string name="dialog_cancel_deletion">Ne pas supprimer</string>
+    <string name="dialog_confirm_deletion">Supprimer</string>
+    <string name="dialog_2check_before_force_sync">Voulez-vous forcer la synchronisation.</string>
+    <string name="dialog_confirm_force_sync">Forcer la synchronisation</string>
+    <string name="dialog_cancel_force_sync">Ne pas forcer la synchronisation</string>
+    <string name="dialog_2check_before_reset_sync">Voulez-vous remettre à zero la synchronisation.</string>
+    <string name="dialog_confirm_reset_sync">Remettre à zero la synchronisation</string>
+    <string name="dialog_cancel_reset_sync">Ne pas remettre à zero la synchronisation</string>
+    <string name="force">Forcer</string>
+    <string name="syncInterval">Intervale de vérification des synchronisation</string>
+    <string name="pref_sync_check_frequency_default">60</string>
+    <string name="session_expired">Session expirée.</string>
+    <string name="camera_unavailable">Appareil photo indisponible.</string>
+    <string name="sync_finished">Terminé</string>
+    <string name="sync_running">En cours...</string>
+    <string name="sync_error">Erreur</string>
+    <string name="sync_restrict">Restreindre la synchronisation :</string>
+    <string name="on_battery">Sur batterie et secteur</string>
+    <string name="charging">Sur secteur</string>
+    <string name="force_sync_desc">Cette option lancera la synchronisation de cet element lors de la prochaine vérification sans prendre compte des restrictions de réseau et d\'état de charge de votre dispositif.\n Il est possible de lancer une verification via le bouton en haut à droite.</string>
+    <string name="reset_sync_desc">Cette option permet d\'envoyer la totalité des fichiers du dossier à synchroniser à la prochaine synchronisation.\n Il est possible de lancer une verification via le bouton en haut à droite.</string>
+    <string name="reset">RàZ</string>
+    <string name="dialog_account_must_be_registered">Le compte %1$s n\'est pas enregistré</string>
+    <string name="dialog_account_must_be_registered_content">Vous devez enregistrer le mot de passe de ce compte dans votre téléphone pour pouvoir utiliser la synchronisation</string>
+    <string name="dialog_confirm_register">Enregistrer ce compte</string>
+    <string name="dialog_cancel_register">Ne pas enregistrer ce compte</string>
+    <string name="_6h">6h</string>
+    <string name="_12h">12h</string>
+    <string name="create_account_link"><a href="https://www.org.org/commande_backup.php?prod=free">Je n\'ai pas de compte</a></string>
+    <string name="dialog_confirm_clear_uploads">Suppression de éléments inactifs</string>
+    <string name="dialog_confirm_clear_uploads_content">Voulez-vous supprimer les transferts inactifs?</string>
+    <string name="dialog_confirm_clear_uploads_positive">Supprimer les éléments inactifs</string>
+    <string name="dialog_confirm_clear_uploads_negative">Annuler</string>
+    <string name="dialog_confirm_cancel_manual_upload">Confirmation de l\'annulation</string>
+    <string name="dialog_confirm_cancel_manual_upload_positive">Annuler</string>
+    <string name="dialog_confirm_cancel_manual_upload_content">Voulez-vous annuler le transfert ?</string>
+    <string name="sync_canceled">Annulé</string>
+    <string name="continue_transfer">Continuer la synchronisation</string>
+    <string name="pref_send_debug_info">Contribuer au développement</string>
+    <string name="pref_send_debug_info_sum">Envoyer les rapports de plantage anonymes au développeur de l\'application</string>
+    <string name="pref_sync_config_check_interval_summary">Une valeur plus élevée permet d\'économiser la batterie de votre appareil</string>
+    <string name="remember_password">Enregistrer le mot de passe</string>
+    <string name="remember_username">Enregistrer le nom de compte</string>
+    <string name="dialog_ask_password">Connexion au compte</string>
+    <string name="dialog_ask_password_positive">Valider</string>
+    <string name="dialog_ask_password_negative">Retour</string>
+    <string name="edit_user_info">Éditer l\'utilisateur</string>
+    <string name="confirm_edit_user">Changer le mot de passe</string>
+    <string name="cancel_edit_user">Annuler</string>
+    <string name="authEditError">Erreur : Les identifiants fournis sont invalides</string>
+    <string name="pref_show_parent_dir">Afficher le dossier parent</string>
+    <string name="pref_show_parent_dir_sum">Affiche un répertoire ../ représentant le dossier parent</string>
+    <string name="fileeditor_title">Editeur de texte</string>
+    <string name="sync_folder_chooser_subtitle">Choisissez le dossier à synchroniser</string>
+    <string name="syncs_next_validate">Valider</string>
+    <string name="invalid_sync_name">Ce nom de synchronisation est invalide. Veuillez entrer un autre nom.</string>
+    <string name="no_results">No Results</string>
+    <string name="remplacer">Remplacer</string>
+    <string name="omettre">Omettre</string>
+    <string name="remplacer_tout">Remplacer tout</string>
+    <string name="omettre_tout">Omettre tout</string>
+    <string name="downloading">Téléchargement en cours</string>
+    <string name="download_finished">Téléchargement terminé</string>
+    <string name="download_canceled">Annulé</string>
+    <string name="uploadfile_notif_mesg">Envoi en cours. Vitesse: %1$s (%2$s)</string>
+    <string name="fileupload_notif_completed">Envoi réussi en %s</string>
+    <string name="fileupload_notif_error">Erreur lors de l\'envoi</string>
+    <string name="fileupload_notif_title">Envoi du fichier</string>
+    <string name="pref_preview_big_images">Visionner les grosses images</string>
+    <string name="prev_preview_big_images_sum">Autorise l\'ouverture des images de plus de 6 Mo dans drivinCloud Open</string>
+    <string name="alert_big_file">Taille importante</string>
+    <string name="alert_big_file_content">Cet image est trop volumineuse pour être ouverte dans drivinCloud Open, voulez-vous la télécharger pour l\'ouvrir dans un lecteur externe ?</string>
+    <string name="alert_big_file_open">Télécharger</string>
+    <string name="alert_big_file_cancel">Annuler</string>
+
+    <!-- Sync log messages and types -->
+    <!-- Types -->
+    <string name="feedback_incomplete_form">Vous devez remplir tous les champs de ce formulaire pour envoyer votre message (5 caractère minimum)</string>
+    <string name="feedback_successfully_sent">Votre message a bien été envoyé aux développeurs de drivinCloud Open</string>
+    <string name="move_cancel">Annuler</string>
+    <string name="feedback_incomplete_form_mail">Adresse email invalide</string>
+    <string name="download_notification_cancel">Annuler</string>
+    <string name="pref_app_version">Version de l\'application</string>
+    <string name="pref_thirdparties">Librairies</string>
+    <string name="pref_libraries_licences">Licences des librairies utilisées</string>
+    <string name="pref_cat_about">À propos</string>
+    <string name="pref_licences">Licences</string>
+    <string name="ask_read_ext_sto_perm">drivinCloud a besoin d\'une permission pour accéder aux fichiers, un nouveau dialogue va vous permettre d\'autoriser l\'accés à l\'application.</string>
+    <string name="choose_file_to_upload">Choisissez un fichier à envoyer</string>
+    <plurals name="nb_elems_move">
+        <item quantity="one">(1 élément)</item>
+        <item quantity="other">(%d éléments)</item>
+    </plurals>
+
+    <!-- Messages -->
+
+
+</resources>

@@ -1,0 +1,313 @@
+CURRENT STATS:
+System memory usage:
+  SOn /Norm: 1 samples:
+    Cached: 338MB min, 338MB avg, 338MB max
+    Free: 658MB min, 658MB avg, 658MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 86MB min, 86MB avg, 86MB max
+    Native: 62MB min, 62MB avg, 62MB max
+
+Per-Package Stats:
+  * phpnet.org.drivincloud_android / u0a67 / v1:
+      * phpnet.org.drivincloud_android / u0a67 / v1:
+               TOTAL: 28% (45MB-45MB-45MB/40MB-40MB-40MB over 2)
+                 Top: 28% (45MB-45MB-45MB/40MB-40MB-40MB over 2)
+
+Summary:
+  * phpnet.org.drivincloud_android / u0a67 / v1:
+           TOTAL: 28% (45MB-45MB-45MB/40MB-40MB-40MB over 2)
+             Top: 28% (45MB-45MB-45MB/40MB-40MB-40MB over 2)
+
+Run time Stats:
+  SOn /Norm: +1m51s848ms (running)
+      TOTAL: +1m51s848ms
+
+Memory usage:
+  Kernel : 86MB (8 samples)
+  Native : 62MB (8 samples)
+  Top    : 18MB (3 samples)
+  ImpFg  : 52MB (8 samples)
+  ImpBg  : 0.93MB (1 samples)
+  Service: 16MB (23 samples)
+  Receivr: 1.8MB (29 samples)
+  CchEmty: 56MB (21 samples)
+  Cached : 338MB (8 samples)
+  Free   : 658MB (8 samples)
+  TOTAL  : 1.3GB
+
+          Start time: 2016-10-12 17:43:51
+  Total elapsed time: +1m56s923ms (partial) libart.so
+
+AGGREGATED OVER LAST 24 HOURS:
+System memory usage:
+  SOn /Norm: 10 samples:
+    Cached: 330MB min, 384MB avg, 459MB max
+    Free: 472MB min, 590MB avg, 691MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 76MB min, 81MB avg, 86MB max
+    Native: 62MB min, 64MB avg, 66MB max
+       Mod : 3 samples:
+    Cached: 435MB min, 455MB avg, 470MB max
+    Free: 482MB min, 510MB avg, 539MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 74MB min, 75MB avg, 75MB max
+    Native: 65MB min, 68MB avg, 73MB max
+
+Per-Package Stats:
+  * phpnet.org.drivincloud_android / u0a58 / v1:
+      * phpnet.org.drivincloud_android / u0a58 / v1:
+               TOTAL: 0.07% (28MB-28MB-28MB/25MB-25MB-25MB over 1)
+                 Top: 0.07% (28MB-28MB-28MB/25MB-25MB-25MB over 1)
+            (Cached): 0.32% (43MB-43MB-43MB/39MB-39MB-39MB over 1)
+  * phpnet.org.drivincloud_android / u0a61 / v1:
+      * phpnet.org.drivincloud_android:sync / u0a61 / v1:
+               TOTAL: 0.01%
+              Imp Bg: 0.01%
+            (Cached): 5.3% (6.8MB-12MB-14MB/3.8MB-6.5MB-7.6MB over 10)
+      * phpnet.org.drivincloud_android / u0a61 / v1:
+               TOTAL: 7.7% (21MB-43MB-48MB/19MB-37MB-43MB over 49)
+                 Top: 7.7% (21MB-43MB-48MB/19MB-37MB-43MB over 49)
+          (Last Act): 0.02%
+            (Cached): 0.41% (40MB-42MB-44MB/37MB-38MB-39MB over 2)
+      * org.php.drivinCloudAndroidSync.SyncService:
+        Process: phpnet.org.drivincloud_android:sync
+            Running count 16 / time 0.01%
+              Bound count 16 / time 0.01%
+          Executing count 32 / time 0.00%
+      * net.gotev.uploadservice.UploadService:
+        Process: phpnet.org.drivincloud_android
+            Running count 6 / time 0.00%
+            Started count 3 / time 0.00%
+          Executing count 6 / time 0.00%
+  * phpnet.org.drivincloud_android / u0a62 / v1:
+      * phpnet.org.drivincloud_android / u0a62 / v1:
+               TOTAL: 0.06% (25MB-25MB-25MB/23MB-23MB-23MB over 1)
+                 Top: 0.06% (25MB-25MB-25MB/23MB-23MB-23MB over 1)
+            (Cached): 0.22% (43MB-43MB-43MB/39MB-39MB-39MB over 1)
+  * phpnet.org.drivincloud_android / u0a63 / v1:
+      * phpnet.org.drivincloud_android:sync / u0a63 / v1:
+            (Cached): 0.33% (9.6MB-9.6MB-9.6MB/5.4MB-5.4MB-5.4MB over 1)
+      * phpnet.org.drivincloud_android / u0a63 / v1:
+               TOTAL: 1.4% (31MB-44MB-46MB/28MB-39MB-42MB over 9)
+                 Top: 1.4% (31MB-44MB-46MB/28MB-39MB-42MB over 9)
+      * phpnet.org.drivincloud_android.Sync.SyncService:
+        Process: phpnet.org.drivincloud_android:sync
+            Running count 3 / time 0.00%
+              Bound count 3 / time 0.00%
+          Executing count 6 / time 0.00%
+  * phpnet.org.drivincloud_android / u0a64 / v1:
+      * phpnet.org.drivincloud_android / u0a64 / v1:
+               TOTAL: 0.57% (27MB-27MB-28MB/24MB-24MB-24MB over 4)
+                 Top: 0.57% (27MB-27MB-28MB/24MB-24MB-24MB over 4)
+          (Last Act): 0.01%
+  * phpnet.org.drivincloud_android / u0a65 / v1:
+      * phpnet.org.drivincloud_android:sync / u0a65 / v1:
+            (Cached): 0.05%
+      * phpnet.org.drivincloud_android / u0a65 / v1:
+               TOTAL: 0.40% (27MB-35MB-50MB/24MB-31MB-45MB over 3)
+                 Top: 0.40% (27MB-35MB-50MB/24MB-31MB-45MB over 3)
+          (Last Act): 0.01%
+      * phpnet.org.drivincloud_android.Sync.SyncService:
+        Process: phpnet.org.drivincloud_android:sync
+            Running count 2 / time 0.00%
+              Bound count 2 / time 0.00%
+          Executing count 4 / time 0.00%
+  * phpnet.org.drivincloud_android / u0a66 / v1:
+      * phpnet.org.drivincloud_android:sync / u0a66 / v1:
+               TOTAL: 0.02%
+              Imp Bg: 0.02%
+            (Cached): 25% (7.0MB-13MB-14MB/3.8MB-6.8MB-8.0MB over 16)
+      * phpnet.org.drivincloud_android / u0a66 / v1:
+               TOTAL: 34% (22MB-44MB-57MB/19MB-37MB-53MB over 197)
+                 Top: 34% (22MB-44MB-57MB/19MB-37MB-53MB over 197)
+          (Last Act): 9.1% (42MB-45MB-49MB/34MB-40MB-44MB over 5)
+            (Cached): 0.26% (50MB-50MB-50MB/45MB-45MB-45MB over 1)
+      * phpnet.org.drivincloud_android.Sync.SyncService:
+        Process: phpnet.org.drivincloud_android:sync
+            Running count 11 / time 0.02%
+              Bound count 11 / time 0.02%
+          Executing count 22 / time 0.00%
+      * net.gotev.uploadservice.UploadService:
+        Process: phpnet.org.drivincloud_android
+            Running count 14 / time 0.01%
+            Started count 7 / time 0.01%
+          Executing count 14 / time 0.00%
+      * phpnet.org.drivincloud_android.Sync.AuthenticatorService:
+        Process: phpnet.org.drivincloud_android
+            Running count 2 / time 0.00%
+              Bound count 2 / time 0.00%
+          Executing count 4 / time 0.00%
+  * phpnet.org.drivincloud_android / u0a67 / v1:
+      * phpnet.org.drivincloud_android:sync / u0a67 / v1:
+               TOTAL: 0.24% (7.0MB-7.0MB-7.0MB/3.8MB-3.8MB-3.8MB over 1)
+              Imp Bg: 0.24% (7.0MB-7.0MB-7.0MB/3.8MB-3.8MB-3.8MB over 1)
+            (Cached): 28% (7.3MB-12MB-15MB/4.2MB-6.3MB-8.4MB over 26)
+      * phpnet.org.drivincloud_android / u0a67 / v1:
+               TOTAL: 18% (23MB-42MB-52MB/18MB-35MB-47MB over 121)
+                 Top: 18% (23MB-42MB-52MB/18MB-35MB-47MB over 121)
+          (Last Act): 13% (39MB-39MB-40MB/32MB-33MB-33MB over 5)
+            (Cached): 2.3% (40MB-44MB-49MB/32MB-37MB-43MB over 9)
+      * phpnet.org.drivincloud_android.Sync.SyncService:
+        Process: phpnet.org.drivincloud_android:sync
+            Running count 34 / time 0.24%
+            Started count 1 / time 0.00%
+              Bound count 33 / time 0.24%
+          Executing count 65 / time 0.01%
+      * net.gotev.uploadservice.UploadService:
+        Process: phpnet.org.drivincloud_android
+            Running count 46 / time 0.03%
+            Started count 23 / time 0.02%
+          Executing count 46 / time 0.00%
+
+Summary:
+  * phpnet.org.drivincloud_android / u0a66 / v1:
+           TOTAL: 34% (22MB-44MB-57MB/19MB-37MB-53MB over 197)
+             Top: 34% (22MB-44MB-57MB/19MB-37MB-53MB over 197)
+      (Last Act): 9.1% (42MB-45MB-49MB/34MB-40MB-44MB over 5)
+        (Cached): 0.26% (50MB-50MB-50MB/45MB-45MB-45MB over 1)
+  * phpnet.org.drivincloud_android / u0a67 / v1:
+           TOTAL: 18% (23MB-42MB-52MB/18MB-35MB-47MB over 121)
+             Top: 18% (23MB-42MB-52MB/18MB-35MB-47MB over 121)
+      (Last Act): 13% (39MB-39MB-40MB/32MB-33MB-33MB over 5)
+        (Cached): 2.3% (40MB-44MB-49MB/32MB-37MB-43MB over 9)
+  * phpnet.org.drivincloud_android / u0a61 / v1:
+           TOTAL: 7.7% (21MB-43MB-48MB/19MB-37MB-43MB over 49)
+             Top: 7.7% (21MB-43MB-48MB/19MB-37MB-43MB over 49)
+      (Last Act): 0.02%
+        (Cached): 0.41% (40MB-42MB-44MB/37MB-38MB-39MB over 2)
+  * phpnet.org.drivincloud_android / u0a63 / v1:
+           TOTAL: 1.4% (31MB-44MB-46MB/28MB-39MB-42MB over 9)
+             Top: 1.4% (31MB-44MB-46MB/28MB-39MB-42MB over 9)
+  * phpnet.org.drivincloud_android / u0a64 / v1:
+           TOTAL: 0.57% (27MB-27MB-28MB/24MB-24MB-24MB over 4)
+             Top: 0.57% (27MB-27MB-28MB/24MB-24MB-24MB over 4)
+      (Last Act): 0.01%
+  * phpnet.org.drivincloud_android / u0a65 / v1:
+           TOTAL: 0.40% (27MB-35MB-50MB/24MB-31MB-45MB over 3)
+             Top: 0.40% (27MB-35MB-50MB/24MB-31MB-45MB over 3)
+      (Last Act): 0.01%
+  * phpnet.org.drivincloud_android:sync / u0a67 / v1:
+           TOTAL: 0.24% (7.0MB-7.0MB-7.0MB/3.8MB-3.8MB-3.8MB over 1)
+          Imp Bg: 0.24% (7.0MB-7.0MB-7.0MB/3.8MB-3.8MB-3.8MB over 1)
+        (Cached): 28% (7.3MB-12MB-15MB/4.2MB-6.3MB-8.4MB over 26)
+  * phpnet.org.drivincloud_android / u0a58 / v1:
+           TOTAL: 0.07% (28MB-28MB-28MB/25MB-25MB-25MB over 1)
+             Top: 0.07% (28MB-28MB-28MB/25MB-25MB-25MB over 1)
+        (Cached): 0.32% (43MB-43MB-43MB/39MB-39MB-39MB over 1)
+  * phpnet.org.drivincloud_android / u0a62 / v1:
+           TOTAL: 0.06% (25MB-25MB-25MB/23MB-23MB-23MB over 1)
+             Top: 0.06% (25MB-25MB-25MB/23MB-23MB-23MB over 1)
+        (Cached): 0.22% (43MB-43MB-43MB/39MB-39MB-39MB over 1)
+  * phpnet.org.drivincloud_android:sync / u0a66 / v1:
+           TOTAL: 0.02%
+          Imp Bg: 0.02%
+        (Cached): 25% (7.0MB-13MB-14MB/3.8MB-6.8MB-8.0MB over 16)
+  * phpnet.org.drivincloud_android:sync / u0a61 / v1:
+           TOTAL: 0.01%
+          Imp Bg: 0.01%
+        (Cached): 5.3% (6.8MB-12MB-14MB/3.8MB-6.5MB-7.6MB over 10)
+  * phpnet.org.drivincloud_android:sync / u0a63 / v1:
+        (Cached): 0.33% (9.6MB-9.6MB-9.6MB/5.4MB-5.4MB-5.4MB over 1)
+  * phpnet.org.drivincloud_android:sync / u0a65 / v1:
+        (Cached): 0.05%
+
+Run time Stats:
+  SOn /Norm: +18h12m23s894ms
+       Mod : +23m17s474ms
+      TOTAL: +18h35m41s368ms
+
+Memory usage:
+  Kernel : 81MB (91 samples)
+  Native : 64MB (91 samples)
+  Persist: 112MB (258 samples)
+  Top    : 39MB (1234 samples)
+  ImpFg  : 67MB (1202 samples)
+  ImpBg  : 9.8MB (429 samples)
+  Service: 39MB (1001 samples)
+  Receivr: 11KB (733 samples)
+  Home   : 30MB (76 samples)
+  LastAct: 13MB (280 samples)
+  CchAct : 21MB (37 samples)
+  CchCAct: 231KB (3 samples)
+  CchEmty: 132MB (1059 samples)
+  Cached : 385MB (91 samples)
+  Free   : 589MB (91 samples)
+  TOTAL  : 1.5GB
+  ServRst: 57 (62 samples)
+
+          Start time: 2016-10-06 12:32:12
+  Total elapsed time: +18h36m4s89ms (partial) libart.so
+
+AGGREGATED OVER LAST 3 HOURS:
+System memory usage:
+  SOn /Norm: 6 samples:
+    Cached: 338MB min, 397MB avg, 434MB max
+    Free: 498MB min, 564MB avg, 680MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 76MB min, 80MB avg, 86MB max
+    Native: 62MB min, 64MB avg, 66MB max
+       Mod : 1 samples:
+    Cached: 435MB min, 435MB avg, 435MB max
+    Free: 539MB min, 539MB avg, 539MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 74MB min, 74MB avg, 74MB max
+    Native: 66MB min, 66MB avg, 66MB max
+
+Per-Package Stats:
+  * phpnet.org.drivincloud_android / u0a67 / v1:
+      * phpnet.org.drivincloud_android:sync / u0a67 / v1:
+               TOTAL: 0.21%
+              Imp Bg: 0.21%
+            (Cached): 58% (12MB-13MB-14MB/6.4MB-6.9MB-8.2MB over 10)
+      * phpnet.org.drivincloud_android / u0a67 / v1:
+               TOTAL: 64% (23MB-43MB-52MB/20MB-36MB-47MB over 66)
+                 Top: 64% (23MB-43MB-52MB/20MB-36MB-47MB over 66)
+          (Last Act): 0.56%
+            (Cached): 17% (40MB-44MB-49MB/32MB-37MB-43MB over 9)
+      * phpnet.org.drivincloud_android.Sync.SyncService:
+        Process: phpnet.org.drivincloud_android:sync
+            Running count 18 / time 0.21%
+              Bound count 18 / time 0.21%
+          Executing count 36 / time 0.03%
+      * net.gotev.uploadservice.UploadService:
+        Process: phpnet.org.drivincloud_android
+            Running count 34 / time 0.12%
+            Started count 17 / time 0.10%
+          Executing count 34 / time 0.02%
+
+Summary:
+  * phpnet.org.drivincloud_android / u0a67 / v1:
+           TOTAL: 64% (23MB-43MB-52MB/20MB-36MB-47MB over 66)
+             Top: 64% (23MB-43MB-52MB/20MB-36MB-47MB over 66)
+      (Last Act): 0.56%
+        (Cached): 17% (40MB-44MB-49MB/32MB-37MB-43MB over 9)
+  * phpnet.org.drivincloud_android:sync / u0a67 / v1:
+           TOTAL: 0.21%
+          Imp Bg: 0.21%
+        (Cached): 58% (12MB-13MB-14MB/6.4MB-6.9MB-8.2MB over 10)
+
+Run time Stats:
+  SOn /Norm: +2h9m56s566ms
+       Mod : +22m7s150ms
+      TOTAL: +2h32m3s716ms
+
+Memory usage:
+  Kernel : 79MB (55 samples)
+  Native : 64MB (55 samples)
+  Persist: 115MB (54 samples)
+  Top    : 40MB (228 samples)
+  ImpFg  : 86MB (272 samples)
+  ImpBg  : 61KB (40 samples)
+  Service: 24MB (276 samples)
+  Receivr: 33KB (225 samples)
+  Home   : 22MB (14 samples)
+  LastAct: 607KB (32 samples)
+  CchAct : 28MB (15 samples)
+  CchEmty: 124MB (287 samples)
+  Cached : 397MB (55 samples)
+  Free   : 563MB (55 samples)
+  TOTAL  : 1.5GB
+  ServRst: 215 (4 samples)
+
+          Start time: 2016-10-12 14:43:49
+  Total elapsed time: +2h32m12s411ms (partial) libart.so

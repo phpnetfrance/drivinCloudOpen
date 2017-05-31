@@ -1,0 +1,58 @@
+@startuml
+abstract class Operations {
+    +OperationResult opRes
+    +createFile(File file, String remotePath)
+    +createFolder(String localPath, String remotePath, String folderName)
+    +deleteFolder(String remotePath, String folderName)
+    +downloadFile(String remotePath, String localPath, File file)
+    +downloadFolder(String remotePath, String localPath)
+    +downloadFolderContent(String remotePath, String localPath)
+}
+
+class DavOperations extends Operations {
+    +createFile(File file, String remotePath)
+    +createFolder(String localPath, String remotePath, String folderName)
+    +deleteFolder(String remotePath, String folderName)
+    +downloadFile(String remotePath, String localPath, File file)
+    +downloadFolder(String remotePath, String localPath)
+    +downloadFolderContent(String remotePath, String localPath)
+}
+
+DavOperations --|> OperationResult
+
+class OperationResult{
+    - boolean success
+    - Status status
+    - int responseCode;
+    - Exception exception;
+    - int progress
+    OperationResult(Status status)
+    OperationResult(Status status, Exception e)
+    int addProgress(int progress)
+    boolean isSuccess()
+    void setSuccess(boolean success)
+    int getResponseCode()
+    void setResponseCode(int responseCode)
+    Exception getException()
+    void setException(Exception exception)
+    int getProgress()
+    void setProgress(int progress)
+}
+
+OperationResult +-- Status
+
+enum Status {
+    Running,
+    Finished,
+    AuthError,
+    FileNotFoundError,
+    CannotResolveHostnameError,
+    NoNetworkError,
+    SSLError,
+    QuotaError,
+    DelayedForWifi,
+    FileIsNull,
+    Error
+}
+
+@enduml

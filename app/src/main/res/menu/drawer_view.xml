@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_explore"
+            android:icon="@drawable/ic_folder_black_24dp"
+            android:title="Explorer" />
+        <item
+            android:id="@+id/nav_uploads"
+            android:icon="@drawable/ic_file_upload_black_24dp"
+            android:title="Voir les transferts" />
+        <item
+            android:id="@+id/nav_syncs"
+            android:icon="@drawable/ic_sync_black_24dp"
+            android:title="Gérer la synchronisation" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Paramètres" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_announcement_black_24dp"
+            android:title="Donner son avis" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Aide" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="Se déconnecter" />
+    </group>
+</menu>

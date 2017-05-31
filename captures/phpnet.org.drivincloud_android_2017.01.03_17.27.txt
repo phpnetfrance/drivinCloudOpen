@@ -1,0 +1,75 @@
+Activity Resolver Table:
+  Full MIME Types:
+      */*:
+        afc339 phpnet.org.drivincloud_android/.Activities.ShareHandleActivity (2 filters)
+
+  Wild MIME Types:
+      *:
+        afc339 phpnet.org.drivincloud_android/.Activities.ShareHandleActivity (2 filters)
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        f67ad7e phpnet.org.drivincloud_android/.Activities.SplashScreen
+      android.intent.action.GET_CONTENT:
+        137572df phpnet.org.drivincloud_android/.Activities.CustomNNFilePickerActivity
+
+  MIME Typed Actions:
+      android.intent.action.SEND:
+        afc339 phpnet.org.drivincloud_android/.Activities.ShareHandleActivity
+      android.intent.action.SEND_MULTIPLE:
+        afc339 phpnet.org.drivincloud_android/.Activities.ShareHandleActivity
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.content.SyncAdapter:
+        97c0b2c phpnet.org.drivincloud_android/.Sync.SyncService
+      android.accounts.AccountAuthenticator:
+        254059f5 phpnet.org.drivincloud_android/.Sync.AuthenticatorService
+
+Registered ContentProviders:
+  phpnet.org.drivincloud_android/.Sync.StubProvider:
+    Provider{4d238a phpnet.org.drivincloud_android/.Sync.StubProvider}
+
+ContentProvider Authorities:
+  [org.phpnet.drivincloud.sync.provider]:
+    Provider{4d238a phpnet.org.drivincloud_android/.Sync.StubProvider}
+      applicationInfo=ApplicationInfo{28685dfb phpnet.org.drivincloud_android}
+
+Key Set Manager:
+  [phpnet.org.drivincloud_android]
+      Signing KeySets: 153
+
+Packages:
+  Package [phpnet.org.drivincloud_android] (2c34ae18):
+    userId=10075 gids=[3003, 1028, 1015]
+    pkg=Package{1e09a071 phpnet.org.drivincloud_android}
+    codePath=/data/app/phpnet.org.drivincloud_android-1
+    resourcePath=/data/app/phpnet.org.drivincloud_android-1
+    legacyNativeLibraryDir=/data/app/phpnet.org.drivincloud_android-1/lib
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    versionCode=1 targetSdk=22
+    versionName=RC1
+    splits=[base]
+    applicationInfo=ApplicationInfo{28685dfb phpnet.org.drivincloud_android}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    dataDir=/data/data/phpnet.org.drivincloud_android
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2017-01-03 17:26:54
+    firstInstallTime=2016-10-21 14:42:59
+    lastUpdateTime=2017-01-03 17:26:54
+    signatures=PackageSignatures{161ee56 [19d4ded7]}
+    permissionsFixed=true haveGids=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    User 0:  installed=true hidden=false stopped=false notLaunched=false enabled=0
+    grantedPermissions:
+      android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+      android.permission.WRITE_SYNC_SETTINGS
+      android.permission.AUTHENTICATE_ACCOUNTS
+      android.permission.INTERNET
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.CAMERA
+      android.permission.READ_SYNC_SETTINGS
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.WAKE_LOCK

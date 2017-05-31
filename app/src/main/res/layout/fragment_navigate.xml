@@ -1,0 +1,75 @@
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.Fragments.Navigate">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context="org.phpnet.openDrivinCloudAndroid.Activities.AcceuilActivity">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/move_bar">
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"></ListView>
+
+                <TextView android:id="@android:id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_results" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/move_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:background="@color/colorPrimary">
+
+                <Button
+                    android:id="@+id/cancel_action"
+                    android:layout_width="85dp"
+                    android:layout_height="35dp"
+                    android:layout_toLeftOf="@+id/move_action"
+                    android:layout_toStartOf="@+id/move_action"
+                    android:text="@string/move_cancel"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorPrimary"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/move_action"
+                    android:layout_width="85dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/move"
+                    android:textColor="@color/colorAccent"
+                    android:background="@color/colorPrimary"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/move_nb_elements"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </FrameLayout>

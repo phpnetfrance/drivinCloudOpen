@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.drivincloud.Activities.AcceuilActivity">
+    <item
+        android:title="Supprimer"
+        android:id="@+id/delete_context_menu"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:title="Télécharger"
+        android:id="@+id/download_context_menu"
+        android:icon="@drawable/ic_download"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:title="Couper"
+        android:id="@+id/move_context_menu"
+        android:icon="@drawable/ic_cut"
+        app:showAsAction="never"></item>
+
+    <item
+        android:title="Renommer"
+        android:id="@+id/rename_context_menu"
+        android:icon="@drawable/ic_rename"
+        app:showAsAction="never"></item>
+
+    <item
+        android:title="Tout sélectionner"
+        android:id="@+id/selectAll_context_menu"
+        android:icon="@drawable/ic_select_all"
+        app:showAsAction="never"></item>
+
+
+</menu>

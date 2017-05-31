@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_sync_check_frequency_values">
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+    </string-array>
+    <string-array name="pref_sync_check_frequency_entries">
+        <item>30 minutes</item>
+        <item>1 heure</item>
+        <item>2 heures</item>
+        <item>3 heures</item>
+    </string-array>
+    <string-array name="login_ssl_choices">
+        <item>https://</item>
+        <item>http://</item>
+    </string-array>
+</resources>

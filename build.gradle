@@ -1,0 +1,34 @@
+// Top-level build file
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath "io.realm:realm-gradle-plugin:2.2.1"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
+        }
+        maven {
+            url 's3://assets.scand.com/maven/repository/RealmBrowser'
+            credentials(AwsCredentials) {
+                accessKey "AKIAIQXKP5XUVFLEEAKA"
+                secretKey "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"
+            }
+        }
+        maven { url 'http://guardian.github.com/maven/repo-releases' }
+    }
+
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

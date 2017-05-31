@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/prefs_title">
+    <PreferenceScreen
+        android:theme="@style/AppTheme.NoActionBar"
+        android:title="@string/pref_open_file_title"
+        android:summary="Choisir les types de fichiers qui s'ouvrent avec drivinCloud"
+        android:key="pref_screen_open_file_associations">
+        <Preference
+            android:title="Aucune association"/>
+    </PreferenceScreen>
+
+    <ListPreference
+        android:key="pref_sync_config_check_interval"
+        android:title="@string/syncInterval"
+        android:summary="@string/pref_sync_config_check_interval_summary"
+        android:dialogTitle="@string/syncInterval"
+        android:defaultValue="@string/pref_sync_check_frequency_default"
+        android:entries="@array/pref_sync_check_frequency_entries"
+        android:entryValues="@array/pref_sync_check_frequency_values" />
+
+    <CheckBoxPreference
+        android:title="@string/pref_send_debug_info"
+        android:summary="@string/pref_send_debug_info_sum"
+        android:key="acra.disable"
+        android:defaultValue="true">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:title="@string/pref_show_parent_dir"
+        android:summary="@string/pref_show_parent_dir_sum"
+        android:key="pref_nav_show_parent_dir"
+        android:defaultValue="true">
+    </CheckBoxPreference>
+
+    <CheckBoxPreference
+        android:title="@string/pref_preview_big_images"
+        android:summary="@string/prev_preview_big_images_sum"
+        android:key="pref_preview_big_images"
+        android:defaultValue="false">
+    </CheckBoxPreference>
+
+    <PreferenceCategory
+        android:title="@string/pref_cat_about">
+        <Preference
+            android:key="pref_about_app_version"
+            android:title="@string/pref_app_version">
+        </Preference>
+        <Preference
+            android:key="pref_about_third_parties"
+            android:title="@string/pref_thirdparties"
+            android:summary="@string/pref_libraries_licences">
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

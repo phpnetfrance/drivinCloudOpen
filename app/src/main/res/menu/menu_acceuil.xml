@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.drivincloud.Activities.AcceuilActivity">
+
+    <item
+        android:title="Créer"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/create_dir"
+                android:title="Dossier"></item>
+            <item
+                android:id="@+id/create_file"
+                android:title="Document texte"></item>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_upload"
+        android:title="Importer"
+        app:showAsAction="never" />
+
+
+    <item
+        android:title="Trier par "
+        app:showAsAction="never">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                app:showAsAction="never">
+                <item
+                    android:id="@+id/sort_letter"
+                    android:title="lettre"></item>
+                <item
+                    android:id="@+id/sort_size"
+                    android:title="taille"></item>
+                <item
+                    android:id="@+id/sort_date"
+                    android:title="date"></item>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_camera"
+        android:title="Appareil photo"
+        app:showAsAction="never"></item>
+
+
+</menu>

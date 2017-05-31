@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nom_de_la_synchronisation"
+        android:inputType="textPersonName"
+        android:id="@+id/name"
+        android:maxLength="20"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Dossier : "/>
+        <TextView
+            android:id="@+id/folderNamePlaceHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorAccent"
+            android:text="Placeholder."
+            android:clickable="true"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/sync_restrict" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/network_type"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_WiFi"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wifi"
+                android:checked="true"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_WiFi_Data"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:checked="false"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wifi_data"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/charging"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_charging"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/charging"
+                android:checked="true"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_battery"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/on_battery"
+                android:checked="false"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/fr_quence_de_synchronisation" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frequency"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton6h"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_6h"
+                android:checked="false"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton12h"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_12h"
+                android:checked="false"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton24h"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_24h"
+                android:checked="false"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton48h"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_48h"
+                android:checked="false"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton7j"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_7j"
+                android:checked="true"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton15j"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_15j"
+                android:checked="true"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton30j"
+                android:background="@drawable/radiobuttons_text_inside"
+                android:textColor="@drawable/radiobuttons_text_inside_textcolor"
+                android:button="@null"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/_30j"
+                android:checked="true"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_gravity="bottom"
+                android:padding="2dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notices>
+
+    <notice>
+        <name>Realm Java</name>
+        <url>https://github.com/realm/realm-java</url>
+        <copyright>Copyright (c) 2011-2016 Realm Inc All rights reserved</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Apache HttpClient</name>
+        <url>http://hc.apache.org/httpclient-3.x/license.html</url>
+        <copyright>© 2001-2008, Apache Software Foundation</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>GSON</name>
+        <url>https://github.com/google/gson</url>
+        <copyright>Copyright 2008 Google Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Android Support Library</name>
+        <url>https://developer.android.com/topic/libraries/support-library/index.html</url>
+        <copyright>Copyright (C) 2011 The Android Open Source Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Secure-preferences</name>
+        <url>https://github.com/scottyab/secure-preferences</url>
+        <copyright>Copyright (C) 2013, Daniel Abraham, Scott Alexander-Bown</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Cardslib</name>
+        <url>https://github.com/gabrielemariotti/cardslib</url>
+        <copyright>Copyright 2013-2014 Gabriele Mariotti</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Material Dialogs</name>
+        <url>https://github.com/afollestad/material-dialogs</url>
+        <copyright>Copyright (c) 2014-2016 Aidan Michael Follestad</copyright>
+        <license>MIT License</license>
+    </notice>
+
+    <notice>
+        <name>Option</name>
+        <url>https://github.com/guardian/Option</url>
+        <copyright>Copyright 2014 Guardian News &amp; Media Ltd</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>NoNonsense-FilePicker</name>
+        <url>https://github.com/spacecowboy/NoNonsense-FilePicker</url>
+        <license>Mozilla Public License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>ACRA</name>
+        <url>https://github.com/ACRA/acra</url>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Glide</name>
+        <url>https://github.com/bumptech/glide</url>
+        <copyright>Copyright 2014 Google, Inc. All rights reserved.
+             Copyright 2012 Jake Wharton
+             Copyright 2011 The Android Open Source Project</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>OkHTTP</name>
+        <url>http://square.github.io/okhttp/</url>
+        <copyright>Copyright 2016 Square, Inc.</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>LicenseDialog</name>
+        <url>https://github.com/PSDev/LicensesDialog</url>
+        <copyright>Copyright 2013-2017 Philip Schiffer</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+    <notice>
+        <name>Android upload service</name>
+        <url>https://github.com/gotev/android-upload-service</url>
+        <copyright>Copyright (C) 2013-2017 Aleksandar Gotev</copyright>
+        <license>Apache Software License 2.0</license>
+    </notice>
+
+</notices>

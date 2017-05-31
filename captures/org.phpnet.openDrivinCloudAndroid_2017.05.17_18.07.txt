@@ -1,0 +1,211 @@
+TASK org.phpnet.openDrivinCloudAndroid id=471
+  ACTIVITY org.phpnet.openDrivinCloudAndroid/org.phpnet.drivinCloudAndroid.Activities.AcceuilActivity 4316fea0 pid=5124
+    Local FragmentActivity 428877f0 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+      Loader Manager 42673850:
+        Active Loaders:
+          #1: LoaderInfo{42932970 #1 : RemoteFileLoader{42932ad8}}
+            mId=1 mArgs=Bundle[{sort=2131362075}]
+            mCallbacks=Navigate{4264a7b0 #0 id=0x7f120079 HELPFRAGMENT}
+            mLoader=RemoteFileLoader{42932ad8 id=1}
+              mId=1 mListener=LoaderInfo{42932970 #1 : RemoteFileLoader{42932ad8}}
+              mStarted=true mContentChanged=false mProcessingChange=false
+            mHaveData=true  mDeliveredData=true
+            mData=[MyFile{name='AppliDrivincloudAndroid/', date='03 Jan 2017 13:47', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='Déplacement/', date='17 May 2017 07:35', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='extrait de 07_July_2016_(myphotopack/', date='08 Feb 2017 08:08', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='Music/', date='14 Apr 2017 09:00', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='Nouveau dossier de test/', date='19 Jan 2017 14:59', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='Nouveau dossier/', date='17 May 2017 08:11', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='Nouveau/', date='09 Feb 2017 09:02', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='NouveauDossier/', date='17 May 2017 12:44', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='Photos/', date='08 Feb 2017 16:07', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='syncs/', date='17 May 2017 07:16', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='test/', date='28 Dec 2016 13:45', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='test3/', date='17 May 2017 07:36', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='testtest/', date='14 Apr 2017 14:17', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='uploadtest/', date='20 Jan 2017 09:45', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='website/', date='21 Feb 2017 09:25', size='null', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=DIR, mimeType='httpd/unix-directory'}, MyFile{name='07_July_2016_(myphotopack.com)-1.zip', date='02 Jan 2017 15:31', size='33.4Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=3.502309E7, typeFile=NOTYPE, mimeType='application/zip'}, MyFile{name='1000215-en.pdf', date='03 Jan 2017 13:40', size='1.61Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1684989.0, typeFile=PDF, mimeType='application/pdf'}, MyFile{name='1490945499672.jpg', date='14 Apr 2017 14:13', size='1.53Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1601421.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='20130605112151_Convention_Syntec_Titre_05.pdf', date='28 Dec 2016 10:29', size='64.6Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=66148.0, typeFile=PDF, mimeType='application/pdf'}, MyFile{name='2015172312427.pdf', date='28 Dec 2016 10:39', size='37.1Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=37992.0, typeFile=PDF, mimeType='application/pdf'}, MyFile{name='aa.txt.plist', date='25 Apr 2017 12:29', size='0', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=0.0, typeFile=NOTYPE, mimeType='text/plain'}, MyFile{name='drivincloudUploadRequest', date='28 Dec 2016 15:52', size='747.66Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=765606.0, typeFile=NOTYPE, mimeType='application/octet-stream'}, MyFile{name='enACEA.pdf', date='28 Dec 2016 09:40', size='102.64Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=105102.0, typeFile=PDF, mimeType='application/pdf'}, MyFile{name='FDroid(1).apk', date='26 Dec 2016 14:26', size='4.37Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=4577097.0, typeFile=NOTYPE, mimeType='application/vnd.android.package-archive'}, MyFile{name='grosse-image.JPG', date='19 Jan 2017 09:16', size='20.33Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=2.1321168E7, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='head.tpl', date='20 Dec 2016 09:34', size='855o', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=855.0, typeFile=TXT, mimeType='application/octet-stream'}, MyFile{name='IMAG0002.jpg', date='03 Jan 2017 16:07', size='936.42Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=958899.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0003.jpg', date='03 Jan 2017 16:07', size='951.12Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=973944.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0004.jpg', date='03 Jan 2017 16:07', size='784.8Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=803637.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0005.jpg', date='03 Jan 2017 16:07', size='845.18Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=865466.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0009.jpg', date='03 Jan 2017 16:07', size='740.36Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=758133.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0013.jpg', date='19 Apr 2017 08:22', size='728.8Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=746292.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0022.jpg', date='16 Dec 2016 14:22', size='869.57Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=890436.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0023.jpg', date='16 Dec 2016 14:22', size='902.86Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=924533.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMAG0025.jpg', date='16 Dec 2016 14:22', size='1.03Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1077916.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='image.jpg', date='03 Mar 2017 17:29', size='516.65Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=529045.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='img-179471035c.jpg', date='15 Dec 2016 14:12', size='64.17Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=65715.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMG_20160413_160943.jpg', date='02 Nov 2016 14:49', size='822.67Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=842409.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMG_20161028_124509.jpg', date='14 Apr 2017 08:29', size='1.56Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1633272.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMG_20161028_124512.jpg', date='02 Nov 2016 11:06', size='1.64Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1719894.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMG_20170120_045655.jpg', date='20 Jan 2017 09:57', size='23.83Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=24407.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMG_20170120_045656.jpg', date='20 Jan 2017 09:58', size='28.05Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=28720.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMG_20170120_045657.jpg', date='20 Jan 2017 09:58', size='16.07Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=16451.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='IMG_20170308_180159.jpg', date='09 Mar 2017 11:53', size='2.12Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=2221008.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='joe_20150820_0191_p000.pdf', date='27 Dec 2016 15:52', size='1.95Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=2039909.0, typeFile=PDF, mimeType='application/pdf'}, MyFile{name='JPEG_20161028_152244_1637062414.jpg', date='28 Oct 2016 13:22', size='1.36Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1430117.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='JPEG_20161102_162813_213136779.jpg', date='02 Nov 2016 15:28', size='2.14Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=2249054.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='JPEG_20161103_101532_-1411548051.jpg', date='19 Jan 2017 15:21', size='1.4Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1470174.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='JPEG_20161103_103939_-1411548051.jpg', date='14 Apr 2017 08:29', size='1.99Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=2086125.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='JPEG_20170103_175039_-714563326.jpg', date='07 Apr 2017 09:34', size='1.65Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1734941.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='JPEG_20170103_175308_267350135.jpg', date='07 Apr 2017 09:34', size='1.89Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1978016.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='JPEG_20170120_143601_-1853702430.jpg', date='07 Apr 2017 09:34', size='1.89Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1976803.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='lucky-patcher6-0-1.apk', date='27 Dec 2016 17:18', size='5.42Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=5687347.0, typeFile=NOTYPE, mimeType='application/vnd.android.package-archive'}, MyFile{name='PANO_20160413_161251.jpg', date='02 Nov 2016 13:13', size='1.46Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1535873.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='PANO_20160413_161457.jpg', date='26 Oct 2016 15:36', size='2.19Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=2293215.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='received_10154020714612934.jpeg', date='07 Dec 2016 09:31', size='43.17Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=44204.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='received_10154020714667934.jpeg', date='06 Dec 2016 09:46', size='92.04Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=94245.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='received_10154020721117934.jpeg', date='09 Nov 2016 09:56', size='35.24Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=36082.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='received_10154020721132934.jpeg', date='06 Dec 2016 09:47', size='68.56Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=70207.0, typeFile=IMG, mimeType='image/jpeg'}, MyFile{name='small.3gp', date='20 Jan 2017 10:12', size='210.74Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=215799.0, typeFile=AUDIO, mimeType='video/3gpp'}, MyFile{name='small.mp4', date='03 Jan 2017 10:53', size='374.64Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=383631.0, typeFile=NOTYPE, mimeType='video/mp4'}, MyFile{name='small.ogv', date='14 Jun 2016 07:09', size='428.0Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=438268.0, typeFile=NOTYPE, mimeType='video/ogg'}, MyFile{name='teft2.php', date='03 Feb 2017 09:41', size='17o', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=17.0, typeFile=TXT, mimeType='application/octet-stream'}, MyFile{name='test.php', date='13 Feb 2017 08:49', size='13o', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=13.0, typeFile=TXT, mimeType='application/octet-stream'}, MyFile{name='traces.txt', date='08 Feb 2017 16:05', size='26.03Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=26655.0, typeFile=TXT, mimeType='text/plain'}, MyFile{name='VID_20161014_102145.mp4', date='09 Feb 2017 10:40', size='303.83Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=311120.0, typeFile=NOTYPE, mimeType='video/mp4'}, MyFile{name='VID_20161014_102202.mp4', date='08 Feb 2017 14:06', size='590.42Ko', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=604587.0, typeFile=NOTYPE, mimeType='video/mp4'}, MyFile{name='VID_20161028_124530.mp4', date='31 Oct 2016 14:51', size='19.09Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=2.0018896E7, typeFile=NOTYPE, mimeType='video/mp4'}, MyFile{name='VIDVIDEO0002.mp4', date='30 Nov 2016 13:53', size='110.64Mo', pathURL='https://drive5650.phpnetstorage.eu', sizeDouble=1.1601784E8, typeFile=NOTYPE, mimeType='video/mp4'}]
+            mStarted=true mReportNextStart=false mDestroyed=false
+            mRetaining=false mRetainingStarted=false mListenerRegistered=true
+    Active Fragments in 42887b08:
+      #0: Navigate{4264a7b0 #0 id=0x7f120079 HELPFRAGMENT}
+        mFragmentId=#7f120079 mContainerId=#7f120079 mTag=HELPFRAGMENT
+        mState=1 mIndex=0 mWho=android:fragment:0 mBackStackNesting=2
+        mAdded=false mRemoving=true mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{42887b08 in HostCallbacks{42887ad0}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+        mSavedViewState={16908292=android.view.AbsSavedState$1@41664960, 2131886292=android.view.AbsSavedState$1@41664960, 2131886293=android.view.AbsSavedState$1@41664960, 2131886294=android.view.AbsSavedState$1@41664960, 2131886295=AbsListView.SavedState{42962d00 selectedId=-9223372036854775808 firstId=-1 viewTop=0 position=0 height=1533 filter=null checkState=null}, 2131886296=android.view.AbsSavedState$1@41664960, 2131886297=android.view.AbsSavedState$1@41664960, 2131886298=android.view.AbsSavedState$1@41664960}
+        Child FragmentManager{4283b6e8 in Navigate{4264a7b0}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+            mContainer=android.support.v4.app.Fragment$2@426cbaa0
+            mParent=Navigate{4264a7b0 #0 id=0x7f120079 HELPFRAGMENT}
+            mCurState=1 mStateSaved=true mDestroyed=false
+      #1: Uploads{4295c570 #1 id=0x7f120079 UPLOADSFRAGMENT}
+        mFragmentId=#7f120079 mContainerId=#7f120079 mTag=UPLOADSFRAGMENT
+        mState=5 mIndex=1 mWho=android:fragment:1 mBackStackNesting=1
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=true
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{42887b08 in HostCallbacks{42887ad0}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+        mContainer=android.widget.FrameLayout{426cc698 V.E..... .......D 0,168-1080,1701 #7f120079 app:id/flContent}
+        mView=android.widget.LinearLayout{429630c8 V.E..... .......D 0,0-1080,1533}
+        mInnerView=android.widget.LinearLayout{429630c8 V.E..... .......D 0,0-1080,1533}
+        Child FragmentManager{42962ea0 in Uploads{4295c570}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+            mContainer=android.support.v4.app.Fragment$2@42939358
+            mParent=Uploads{4295c570 #1 id=0x7f120079 UPLOADSFRAGMENT}
+            mCurState=5 mStateSaved=false mDestroyed=false
+      #2: TabManualUploads{42982a68 #2 id=0x7f1200fa}
+        mFragmentId=#7f1200fa mContainerId=#7f1200fa mTag=null
+        mState=5 mIndex=2 mWho=android:fragment:2 mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{42887b08 in HostCallbacks{42887ad0}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+        mContainer=android.support.v4.view.ViewPager{4263bc40 VFED.... .......D 18,162-1062,1515 #7f1200fa app:id/pager}
+        mView=android.widget.RelativeLayout{42a08910 V.E..... .......D 0,0-1044,1353}
+        mInnerView=android.widget.RelativeLayout{42a08910 V.E..... .......D 0,0-1044,1353}
+        Child FragmentManager{429cb4f8 in TabManualUploads{42982a68}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+            mContainer=android.support.v4.app.Fragment$2@429982a0
+            mParent=TabManualUploads{42982a68 #2 id=0x7f1200fa}
+            mCurState=5 mStateSaved=false mDestroyed=false
+      #3: TabSyncUploads{42a574b0 #3 id=0x7f1200fa}
+        mFragmentId=#7f1200fa mContainerId=#7f1200fa mTag=null
+        mState=5 mIndex=3 mWho=android:fragment:3 mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=false mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=false
+        mFragmentManager=FragmentManager{42887b08 in HostCallbacks{42887ad0}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+        mContainer=android.support.v4.view.ViewPager{4263bc40 VFED.... .......D 18,162-1062,1515 #7f1200fa app:id/pager}
+        mView=android.widget.RelativeLayout{42987e28 V.E..... ........ 1044,0-2088,1353}
+        mInnerView=android.widget.RelativeLayout{42987e28 V.E..... ........ 1044,0-2088,1353}
+        Child FragmentManager{42987d38 in TabSyncUploads{42a574b0}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+            mContainer=android.support.v4.app.Fragment$2@42619338
+            mParent=TabSyncUploads{42a574b0 #3 id=0x7f1200fa}
+            mCurState=5 mStateSaved=false mDestroyed=false
+      #4: TabManualUploads{429f6b90 #4 id=0x7f1200fa}
+        mFragmentId=#7f1200fa mContainerId=#7f1200fa mTag=null
+        mState=5 mIndex=4 mWho=android:fragment:4 mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{42887b08 in HostCallbacks{42887ad0}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+        mContainer=android.support.v4.view.ViewPager{429f4748 VFED.... .......D 18,162-1062,1515 #7f1200fa app:id/pager}
+        mView=android.widget.RelativeLayout{42a31c38 V.E..... ........ 0,0-1044,1353}
+        mInnerView=android.widget.RelativeLayout{42a31c38 V.E..... ........ 0,0-1044,1353}
+        Child FragmentManager{42a31a20 in TabManualUploads{429f6b90}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+            mContainer=android.support.v4.app.Fragment$2@428d9d40
+            mParent=TabManualUploads{429f6b90 #4 id=0x7f1200fa}
+            mCurState=5 mStateSaved=false mDestroyed=false
+      #5: TabSyncUploads{429f6d70 #5 id=0x7f1200fa}
+        mFragmentId=#7f1200fa mContainerId=#7f1200fa mTag=null
+        mState=5 mIndex=5 mWho=android:fragment:5 mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=false mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=false
+        mFragmentManager=FragmentManager{42887b08 in HostCallbacks{42887ad0}}
+        mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+        mContainer=android.support.v4.view.ViewPager{429f4748 VFED.... .......D 18,162-1062,1515 #7f1200fa app:id/pager}
+        mView=android.widget.RelativeLayout{428dd1e0 V.E..... .......D 1044,0-2088,1353}
+        mInnerView=android.widget.RelativeLayout{428dd1e0 V.E..... .......D 1044,0-2088,1353}
+        Child FragmentManager{428dd0f0 in TabSyncUploads{429f6d70}}:
+          FragmentManager misc state:
+            mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+            mContainer=android.support.v4.app.Fragment$2@428c57d8
+            mParent=TabSyncUploads{429f6d70 #5 id=0x7f1200fa}
+            mCurState=5 mStateSaved=false mDestroyed=false
+    Added Fragments:
+      #0: TabManualUploads{42982a68 #2 id=0x7f1200fa}
+      #1: TabSyncUploads{42a574b0 #3 id=0x7f1200fa}
+      #2: Uploads{4295c570 #1 id=0x7f120079 UPLOADSFRAGMENT}
+      #3: TabManualUploads{429f6b90 #4 id=0x7f1200fa}
+      #4: TabSyncUploads{429f6d70 #5 id=0x7f1200fa}
+    Fragments Created Menus:
+      #0: Uploads{4295c570 #1 id=0x7f120079 UPLOADSFRAGMENT}
+    Back Stack:
+      #0: BackStackEntry{4262e2f8 #0 org.phpnet.drivinCloudAndroid.Activities.Fragments.Navigate}
+        mName=org.phpnet.drivinCloudAndroid.Activities.Fragments.Navigate mIndex=0 mCommitted=true
+        Operations:
+          Op #0: ADD Navigate{4264a7b0 #0 id=0x7f120079 HELPFRAGMENT}
+      #1: BackStackEntry{4295c4f8 #1 org.phpnet.drivinCloudAndroid.Activities.Fragments.Uploads.Uploads}
+        mName=org.phpnet.drivinCloudAndroid.Activities.Fragments.Uploads.Uploads mIndex=1 mCommitted=true
+        Operations:
+          Op #0: REMOVE Navigate{4264a7b0 #0 id=0x7f120079 HELPFRAGMENT}
+          Op #1: ADD Uploads{4295c570 #1 id=0x7f120079 UPLOADSFRAGMENT}
+    Back Stack Indices:
+      #0: BackStackEntry{4262e2f8 #0 org.phpnet.drivinCloudAndroid.Activities.Fragments.Navigate}
+      #1: BackStackEntry{4295c4f8 #1 org.phpnet.drivinCloudAndroid.Activities.Fragments.Uploads.Uploads}
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@42887ad0
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{4288ad90 V.E..... ... 0,0-1080,1776}
+        android.widget.LinearLayout{4288b4c0 V.E..... ... 0,0-1080,1776}
+          android.view.ViewStub{4288bf60 G.E..... ... 0,0-0,0 #102030e}
+          android.widget.FrameLayout{4288c1c0 V.E..... ... 0,75-1080,1776}
+            android.support.v7.widget.FitWindowsFrameLayout{4288c960 V.E..... ... 0,0-1080,1701 #7f120064 app:id/action_bar_root}
+              android.support.v7.widget.ContentFrameLayout{4288cea0 V.ED.... ... 0,0-1080,1701 #1020002 android:id/content}
+                android.support.v4.widget.DrawerLayout{4288f648 VFE..... ... 0,0-1080,1701 #7f120078 app:id/drawer_layout}
+                  android.widget.LinearLayout{42823030 V.E..... ... 0,0-1080,1701}
+                    android.support.v7.widget.Toolbar{42630548 V.E..... ... 0,0-1080,168 #7f1200f9 app:id/toolbar}
+                      android.support.v7.widget.AppCompatImageButton{426177c8 VFED..C. ... 0,0-168,168}
+                      android.widget.ProgressBar{42610938 G.ED.... ... 0,0-0,0 #7f120169 app:id/progress_spinner}
+                      android.support.v7.widget.AppCompatTextView{428900a0 V.ED.... ... 216,43-494,124}
+                      android.support.v7.widget.ActionMenuView{428006f8 V.E..... ... 936,0-1080,168}
+                        android.support.v7.view.menu.ActionMenuItemView{42a0a7a8 VFED..CL ... 0,12-144,156 #7f12018f app:id/clear}
+                    android.widget.FrameLayout{426cc698 V.E..... ... 0,168-1080,1701 #7f120079 app:id/flContent}
+                      android.widget.LinearLayout{429630c8 V.E..... ... 0,0-1080,1533}
+                        android.support.design.widget.TabLayout{42700930 VFED.... ... 0,0-1080,144 #7f1200f8 app:id/tab_layout}
+                          android.support.design.widget.TabLayout$SlidingTabStrip{42701180 V.ED.... ... 0,0-1080,144}
+                            android.support.design.widget.TabLayout$TabView{429f4d60 VFE...C. .S. 0,0-540,144}
+                              android.support.v7.widget.AppCompatImageView{429f54e8 G.ED.... .S. 0,0-0,0}
+                              android.support.v7.widget.AppCompatTextView{426d6710 V.ED.... .S. 171,43-368,100}
+                            android.support.design.widget.TabLayout$TabView{426d6db0 VFE...C. ... 540,0-1080,144}
+                              android.support.v7.widget.AppCompatImageView{426d7428 G.ED.... ... 0,0-0,0}
+                              android.support.v7.widget.AppCompatTextView{4291fec8 V.ED.... ... 77,43-463,100}
+                        android.support.v4.view.ViewPager{429f4748 VFED.... ... 18,162-1062,1515 #7f1200fa app:id/pager}
+                          android.widget.RelativeLayout{42a31c38 V.E..... ... 0,0-1044,1353}
+                            android.support.v7.widget.RecyclerView{42951020 VFED.V.. F.. 0,0-1044,1353 #7f1200fb app:id/listContainer}
+                              android.widget.LinearLayout{42a47ef8 V.E...C. ... 0,0-1044,153}
+                                android.support.v7.widget.CardView{429b7e78 V.E..... ... 0,0-1044,153 #7f1200fc app:id/upload_card_view}
+                                  android.widget.LinearLayout{429aff00 V.E..... ... 8,11-1036,142}
+                                    android.widget.LinearLayout{429b01c0 V.E..... ... 15,9-1013,129}
+                                      android.support.v7.widget.AppCompatTextView{429b04d0 V.ED.... ... 0,0-998,57 #7f1200fd app:id/fileName}
+                                      android.support.v7.widget.AppCompatTextView{429b0a10 V.ED.... ... 0,57-397,114 #7f1200fe app:id/progressText}
+                                    android.widget.ProgressBar{429b1128 V.ED.... ... 0,70-1028,190 #7f1200ff app:id/progressBar}
+                          android.widget.RelativeLayout{428dd1e0 V.E..... ... 1044,0-2088,1353}
+                            android.support.v7.widget.RecyclerView{429f7148 VFED.V.. ... 0,0-1044,1353 #7f1200fb app:id/listContainer}
+                  android.support.design.widget.NavigationView{4281dd08 I.E..... ... -840,0-0,1701 #7f12007a app:id/nvView}
+                    android.support.design.internal.NavigationMenuView{426a8450 VFED.V.. ... 0,0-840,1701 #7f1200a7 app:id/design_navigation_view}
+                      android.widget.LinearLayout{4283b3b8 V.E..... ... 0,0-840,324 #7f1200a6 app:id/navigation_header_container}
+                        android.widget.LinearLayout{4283e7b8 V.E..... ... 0,0-840,300}
+                          android.support.v7.widget.AppCompatTextView{4288ef50 V.ED.... ... 48,195-792,252}
+                      android.support.design.internal.NavigationMenuItemView{428002f0 VFED..C. ... 0,324-840,468}
+                        android.support.v7.widget.AppCompatCheckedTextView{428923a8 V.ED.... ... 48,0-792,144 #7f1200a8 app:id/design_menu_item_text}
+                        android.view.ViewStub{4263c8f8 G.E..... ... 0,0-0,0 #7f1200a9}
+                      android.support.design.internal.NavigationMenuItemView{42a36010 VFED..C. ... 0,468-840,612}
+                        android.support.v7.widget.AppCompatCheckedTextView{429bfe38 V.ED.... ... 48,0-792,144 #7f1200a8 app:id/design_menu_item_text}
+                        android.view.ViewStub{42a35448 G.E..... ... 0,0-0,0 #7f1200a9}
+                      android.support.design.internal.NavigationMenuItemView{4269a3a0 VFED..C. ... 0,612-840,756}
+                        android.support.v7.widget.AppCompatCheckedTextView{429e3d78 V.ED.... ... 48,0-792,144 #7f1200a8 app:id/design_menu_item_text}
+                        android.view.ViewStub{42a02168 G.E..... ... 0,0-0,0 #7f1200a9}
+                      android.widget.FrameLayout{42800fb0 V.E..... ... 0,756-840,807}
+                        android.view.View{428273f0 V.ED.... ... 0,24-840,27}
+                      android.support.design.internal.NavigationMenuItemView{42a4dca0 VFED..C. ... 0,807-840,951}
+                        android.support.v7.widget.AppCompatCheckedTextView{429da8c0 V.ED.... ... 48,0-792,144 #7f1200a8 app:id/design_menu_item_text}
+                        android.view.ViewStub{4288b8d8 G.E..... ... 0,0-0,0 #7f1200a9}
+                      android.support.design.internal.NavigationMenuItemView{42a19710 VFED..C. ... 0,951-840,1095}
+                        android.support.v7.widget.AppCompatCheckedTextView{42a16180 V.ED.... ... 48,0-792,144 #7f1200a8 app:id/design_menu_item_text}
+                        android.view.ViewStub{429f24a0 G.E..... ... 0,0-0,0 #7f1200a9}
+                      android.support.design.internal.NavigationMenuItemView{42986c08 VFED..C. ... 0,1095-840,1239}
+                        android.support.v7.widget.AppCompatCheckedTextView{429872c0 V.ED.... ... 48,0-792,144 #7f1200a8 app:id/design_menu_item_text}
+                        android.view.ViewStub{429bebd8 G.E..... ... 0,0-0,0 #7f1200a9}
+                      android.widget.FrameLayout{42882598 V.E..... ... 0,1239-840,1290}
+                        android.view.View{4282dc98 V.ED.... ... 0,24-840,27}
+                      android.support.design.internal.NavigationMenuItemView{42a13778 VFED..C. ... 0,1290-840,1434}
+                        android.support.v7.widget.AppCompatCheckedTextView{4295a350 V.ED.... ... 48,0-792,144 #7f1200a8 app:id/design_menu_item_text}
+                        android.view.ViewStub{4295a8c8 G.E..... ... 0,0-0,0 #7f1200a9}
+              android.support.v7.widget.ViewStubCompat{4288d348 G.E..... ... 0,0-0,0 #7f120065 app:id/action_mode_bar_stub}
