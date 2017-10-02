@@ -99,6 +99,7 @@ public class AcceuilActivity extends AppCompatActivity
 
     public static final String KEYSORT = "keySort";
     private static final int REQUEST_TAKE_PHOTO = 1;
+    private static final int REQUEST_CAMERA_PERMISSION = 53432;
     private Navigate navigateFragment;
     private Help helpFragment;
     private Uploads uploadsFragment;
@@ -199,6 +200,12 @@ public class AcceuilActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        if(CurrentUser.getInstance().serverURL == null){
+            Log.d(TAG, "onCreate: Logout bc CurrentUser not instanciated");
+            ClickLogout.getInstance().onClickLogout(true);
+        }
+
         setContentView(R.layout.activity_acceuil);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -227,8 +234,13 @@ public class AcceuilActivity extends AppCompatActivity
         nvDrawer.getMenu().getItem(0).setChecked(true);
 
         realm = Realm.getDefaultInstance();
-        isUserRegistered = Settings.getUser(context, CurrentUser.getInstance().serverURL, CurrentUser.getInstance().username) != null
-        && !Settings.getUser(context, CurrentUser.getInstance().serverURL, CurrentUser.getInstance().username).getPassword().equals("");
+        try {
+            isUserRegistered = Settings.getUser(context, CurrentUser.getInstance().serverURL, CurrentUser.getInstance().username) != null
+                    && !Settings.getUser(context, CurrentUser.getInstance().serverURL, CurrentUser.getInstance().username).getPassword().equals("");
+        }catch(NullPointerException e){
+            Log.e(TAG, "onCreate: CurrentUser no more instanciated, logout.", e);
+            ClickLogout.getInstance().onClickLogout(true);
+        }
     }
 
 
@@ -376,6 +388,7 @@ public class AcceuilActivity extends AppCompatActivity
                                         ActivityCompat.requestPermissions(AcceuilActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_GRANT_REQUEST_CODE_FILECHOOSER);
                                     }
                                 })
+                                .positiveText(R.string.ok)
                                 .build()
                                 .show();
                     }else {
@@ -449,25 +462,34 @@ public class AcceuilActivity extends AppCompatActivity
 
     /*Appel l'activité de la caméra si possible*/
     private void dispatchTakePictureIntent() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
-            //File photoFile = null;
-            try {
-                photoFile = createImageFile();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-            // Continue only if the File was successfully created
-            if (photoFile != null) {
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(photoFile));
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            } else {
-                CurrentUser.getInstance().showToast(getContext(), getString(R.string.camera_unavailable));
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
+        } else {
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            // Ensure that there's a camera activity to handle the intent
+            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                // Create the File where the photo should go
+                //File photoFile = null;
+                try {
+                    photoFile = createImageFile();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                // Continue only if the File was successfully created
+                if (photoFile != null) {
+                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                            Uri.fromFile(photoFile));
+                    startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+                } else {
+                    CurrentUser.getInstance().showToast(getContext(), getString(R.string.camera_unavailable));
+                }
             }
         }
+
+
     }
 
 
@@ -533,7 +555,11 @@ public class AcceuilActivity extends AppCompatActivity
                         grantUriPermission(getPackageName(), fileUri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
                         Log.d(TAG, "onActivityResult: persist READURI permission for "+fileUri+" package: "+getPackageName());
                         final int flags = data.getFlags() & Intent.FLAG_GRANT_READ_URI_PERMISSION;
-                        getContentResolver().takePersistableUriPermission(fileUri, flags);
+                        try{
+                            getContentResolver().takePersistableUriPermission(fileUri, flags);
+                        }catch(SecurityException e){
+                            Log.e(TAG, "onActivityResult: Erreur while taking permission", e);
+                        }
                     }
 
 
@@ -936,12 +962,24 @@ public class AcceuilActivity extends AppCompatActivity
                     Log.d(TAG, "onRequestPermissionsResult: grantResults["+permissions[i]+"]="+grantResults[i]);
                 }
                 if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    showFileChooser(FILE_UPLOAD_REQUEST_CODE);
+                    //showFileChooser(FILE_UPLOAD_REQUEST_CODE);
+                    Intent i = getBaseContext().getPackageManager()
+                            .getLaunchIntentForPackage( getBaseContext().getPackageName() );
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i);
                 }else{
                     new MaterialDialog.Builder(getContext())
                             .content("Impossible d'accéder à vos fichiers.")
                             .build()
                             .show();
+                }
+            }
+
+            case REQUEST_CAMERA_PERMISSION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    dispatchTakePictureIntent();
+                } else {
+                    Toast.makeText(this, "La permission d'utiliser la camera est nécessaire", Toast.LENGTH_SHORT).show();
                 }
             }
         }

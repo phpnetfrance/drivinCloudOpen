@@ -21,19 +21,10 @@ public class ActionbarUtils {
      * @param isUp set to true to draw the moveBack button
      */
     public static void setHomeAsUpIndicator(Activity activity, ActionBar actionBar, boolean isUp){
-        Log.d(TAG, "fixHomeButtonSize: Fixing...");
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if(isUp){
-                actionBar.setHomeAsUpIndicator(R.drawable.back_logo);
-            }else{
-                actionBar.setHomeAsUpIndicator(R.drawable.back_logo_nude);
-            }
-        } else {
-            if(isUp){
-                actionBar.setHomeAsUpIndicator(R.mipmap.back_logo);
-            }else{
-                actionBar.setHomeAsUpIndicator(R.mipmap.back_logo_nude);
-            }
+        if(isUp){
+            actionBar.setHomeAsUpIndicator(R.mipmap.back_logo);
+        }else{
+            actionBar.setHomeAsUpIndicator(R.mipmap.back_logo_nude);
         }
         Log.d(TAG, "fixHomeButtonSize: Done...");
     }

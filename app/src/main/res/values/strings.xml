@@ -96,7 +96,7 @@
     <string name="session_expired">Session expirée.</string>
     <string name="camera_unavailable">Appareil photo indisponible.</string>
     <string name="sync_finished">Terminé</string>
-    <string name="sync_running">En cours...</string>
+    <string name="sync_running">En cours…</string>
     <string name="sync_error">Erreur</string>
     <string name="sync_restrict">Restreindre la synchronisation :</string>
     <string name="on_battery">Sur batterie et secteur</string>
@@ -110,7 +110,6 @@
     <string name="dialog_cancel_register">Ne pas enregistrer ce compte</string>
     <string name="_6h">6h</string>
     <string name="_12h">12h</string>
-    <string name="create_account_link"><a href="https://www.org.org/commande_backup.php?prod=free">Je n\'ai pas de compte</a></string>
     <string name="dialog_confirm_clear_uploads">Suppression de éléments inactifs</string>
     <string name="dialog_confirm_clear_uploads_content">Voulez-vous supprimer les transferts inactifs?</string>
     <string name="dialog_confirm_clear_uploads_positive">Supprimer les éléments inactifs</string>
@@ -169,7 +168,7 @@
     <string name="pref_libraries_licences">Licences des librairies utilisées</string>
     <string name="pref_cat_about">À propos</string>
     <string name="pref_licences">Licences</string>
-    <string name="ask_read_ext_sto_perm">drivinCloud a besoin d\'une permission pour accéder aux fichiers, un nouveau dialogue va vous permettre d\'autoriser l\'accés à l\'application.</string>
+    <string name="ask_read_ext_sto_perm">drivinCloud a besoin d\'une permission pour accéder aux fichiers, un nouveau dialogue va vous permettre d\'autoriser l\'accès à l\'application. Un redémarrage de l\'application est nécéssaire</string>
     <string name="choose_file_to_upload">Choisissez un fichier à envoyer</string>
     <plurals name="nb_elems_move">
         <item quantity="one">(1 élément)</item>

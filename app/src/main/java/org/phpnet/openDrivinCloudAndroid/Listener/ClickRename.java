@@ -13,6 +13,8 @@ import org.phpnet.openDrivinCloudAndroid.Common.CurrentUser;
 import org.phpnet.openDrivinCloudAndroid.R;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,10 +69,14 @@ public class ClickRename {
             public void run() {
                 CurrentUser currentUser = CurrentUser.getInstance();
                 String path = null;
-                path = currentUser.currentDirURL().toString();
+                try {
+                    path = URLDecoder.decode(currentUser.currentDirURL().toString(), "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
                 try {
                     String oldName = new String(file.name);
-                    currentUser.wdr.moveMethod(path + oldName, path + newName.getText());
+                    currentUser.wdr.moveMethod(path + "/" + oldName, path + "/" + newName.getText());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

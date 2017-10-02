@@ -1,16 +1,19 @@
 package org.phpnet.openDrivinCloudAndroid.Activities.Fragments.Sync;
 
+import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
@@ -87,6 +90,7 @@ public class Syncs extends Fragment {
     private Sync newSync;
     private MaterialDialog newSyncDialog;
     private boolean isReselectingFolder = false; //Used to check if we reopen the sync dialog or not
+    private FloatingActionButton fabNewSync;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -113,6 +117,30 @@ public class Syncs extends Fragment {
                 AUTHORITY,
                 Bundle.EMPTY,
                 interval);
+    }
+
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case PERMISSION_GRANT_REQUEST_CODE_FILECHOOSER: {
+                for(int i = 0; i<grantResults.length; i++){
+                    Log.d(TAG, "onRequestPermissionsResult: grantResults["+permissions[i]+"]="+grantResults[i]);
+                }
+                if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    Intent i = getActivity().getBaseContext().getPackageManager()
+                            .getLaunchIntentForPackage( getActivity().getBaseContext().getPackageName() );
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i);
+                }else{
+                    new MaterialDialog.Builder(getContext())
+                            .content("Impossible d'accéder à vos fichiers.")
+                            .build()
+                            .show();
+                }
+            }
+        }
     }
 
     @Override
@@ -219,8 +247,8 @@ public class Syncs extends Fragment {
 
 
         //Handling new sync
-        FloatingActionButton addSyncButton = (FloatingActionButton) rootView.findViewById(R.id.newSyncButton);
-        addSyncButton.setOnClickListener(new View.OnClickListener() {
+        fabNewSync = (FloatingActionButton) rootView.findViewById(R.id.newSyncButton);
+        fabNewSync.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 newSync = new Sync();
@@ -253,136 +281,161 @@ public class Syncs extends Fragment {
                         .build();
 
                 chooserIntent.putExtra(DirectoryChooserActivity.EXTRA_CONFIG, config);
-                //Launch folder chooser
-                startActivityForResult(chooserIntent, REQUEST_DIRECTORY);
 
-                TextView folderNamePlaceholder = (TextView) form.findViewById(R.id.folderNamePlaceHolder);
-                folderNamePlaceholder.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Log.d(TAG, "onClick: Lets change the folder");
-                        newSyncDialog.dismiss();
-                        isReselectingFolder = true;
-                        startActivityForResult(chooserIntent, REQUEST_DIRECTORY);
+
+                //Check permissions
+                Log.d(TAG, "onOptionsItemSelected: Checking permissions for READ_EXTERNAL_STORAGE ("+PackageManager.PERMISSION_GRANTED+"|"+PackageManager.PERMISSION_DENIED+") : "+ ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE));
+                if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+                    if(ActivityCompat.shouldShowRequestPermissionRationale(Syncs.this.getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                        Log.d(TAG, "onOptionsItemSelected: Showing information dialog");
+                        new MaterialDialog.Builder(getContext())
+                                .content(R.string.ask_read_ext_sto_perm)
+                                .onAny(new MaterialDialog.SingleButtonCallback() {
+                                    @Override
+                                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                        Log.d(TAG, "onOptionsItemSelected: Requestion permissions");
+                                        ActivityCompat.requestPermissions(Syncs.this.getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_GRANT_REQUEST_CODE_FILECHOOSER);
+                                    }
+                                })
+                                .positiveText(R.string.ok)
+                                .build()
+                                .show();
+                    }else {
+                        Log.d(TAG, "onOptionsItemSelected: Requestion permissions "+new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}.toString());
+                        ActivityCompat.requestPermissions(Syncs.this.getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_GRANT_REQUEST_CODE_FILECHOOSER);
                     }
-                });
+                }else{
+                    //Launch folder chooser
+                    startActivityForResult(chooserIntent, REQUEST_DIRECTORY);
 
-                //Create the dialog if it doesn't exist
-                if(newSyncDialog == null) {
-                    newSyncDialog = new MaterialDialog.Builder(v.getContext())
-                            .title(R.string.add_new_sync)
-                            .icon(ContextCompat.getDrawable(getContext(), R.drawable.ic_sync_black_24dp))
-                            .customView(form, true)
-                            .positiveText(R.string.syncs_next_validate)
-                            .negativeText(R.string.cancel)
-                            .autoDismiss(false)
-                            .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                @Override
-                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                    EditText name = (EditText) dialog.findViewById(R.id.name);
-                                    RadioGroup netType = (RadioGroup) dialog.findViewById(R.id.network_type);
-                                    RadioGroup charging = (RadioGroup) dialog.findViewById(R.id.charging);
-                                    RadioGroup freq = (RadioGroup) dialog.findViewById(R.id.frequency);
-                                    RadioButton checkedNetType = (RadioButton) dialog.findViewById(netType.getCheckedRadioButtonId());
-                                    RadioButton checkedCharging = (RadioButton) dialog.findViewById(netType.getCheckedRadioButtonId());
-                                    RadioButton checkedFrequency = (RadioButton) dialog.findViewById(freq.getCheckedRadioButtonId());
+                    TextView folderNamePlaceholder = (TextView) form.findViewById(R.id.folderNamePlaceHolder);
+                    folderNamePlaceholder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.d(TAG, "onClick: Lets change the folder");
+                            newSyncDialog.dismiss();
+                            isReselectingFolder = true;
+                            startActivityForResult(chooserIntent, REQUEST_DIRECTORY);
+                        }
+                    });
+
+                    //Create the dialog if it doesn't exist
+                    if(newSyncDialog == null) {
+                        newSyncDialog = new MaterialDialog.Builder(v.getContext())
+                                .title(R.string.add_new_sync)
+                                .icon(ContextCompat.getDrawable(getContext(), R.drawable.ic_sync_black_24dp))
+                                .customView(form, true)
+                                .positiveText(R.string.syncs_next_validate)
+                                .negativeText(R.string.cancel)
+                                .autoDismiss(false)
+                                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                                    @Override
+                                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                        EditText name = (EditText) dialog.findViewById(R.id.name);
+                                        RadioGroup netType = (RadioGroup) dialog.findViewById(R.id.network_type);
+                                        RadioGroup charging = (RadioGroup) dialog.findViewById(R.id.charging);
+                                        RadioGroup freq = (RadioGroup) dialog.findViewById(R.id.frequency);
+                                        RadioButton checkedNetType = (RadioButton) dialog.findViewById(netType.getCheckedRadioButtonId());
+                                        RadioButton checkedCharging = (RadioButton) dialog.findViewById(netType.getCheckedRadioButtonId());
+                                        RadioButton checkedFrequency = (RadioButton) dialog.findViewById(freq.getCheckedRadioButtonId());
 
 
-                                    //Check if the name is available
-                                    Log.d(TAG, "onClick: " + TextUtils.isEmpty(name.getText()));
-                                    TextUtils.isEmpty(name.getText());
+                                        //Check if the name is available
+                                        Log.d(TAG, "onClick: " + TextUtils.isEmpty(name.getText()));
+                                        TextUtils.isEmpty(name.getText());
 
-                                    boolean nameIsOk = true;
-                                    if (name.getText().toString().isEmpty()) {
-                                        dialog.show();
-                                        nameIsOk = false;
+                                        boolean nameIsOk = true;
+                                        if (name.getText().toString().isEmpty()) {
+                                            dialog.show();
+                                            nameIsOk = false;
+                                        }
+
+                                        Sync res = DB.where(Sync.class).equalTo("name", name.getText().toString()).findFirst();
+                                        if (res != null) { //TODO Test this
+                                            Toast.makeText(getContext(), R.string.name_already_taken, Toast.LENGTH_LONG).show();
+                                            dialog.show();
+                                            nameIsOk = false;
+                                        }
+
+                                        Log.d(TAG, "Results | Name: " + name.getText().toString() + ", NetType: " + checkedNetType.getText() + ", Freq: " + checkedFrequency.getText());
+
+                                        newSync.setName(name.getText().toString());
+                                        Log.d(TAG, "Radiobutton id : " + checkedFrequency.getId());
+
+                                        switch (checkedNetType.getId()) {
+                                            case R.id.radioButton_WiFi:
+                                                newSync.setNetworkType(Sync.NET_TYPE.WIFI);
+                                                break;
+                                            case R.id.radioButton_WiFi_Data:
+                                                newSync.setNetworkType(Sync.NET_TYPE.WIFIDATA);
+                                                break;
+                                        }
+
+                                        switch (charging.getId()) {
+                                            case R.id.radioButton_charging:
+                                                newSync.setChargingOnly(true);
+                                                break;
+                                            case R.id.radioButton_battery:
+                                                newSync.setChargingOnly(false);
+                                                break;
+                                        }
+
+                                        switch (checkedFrequency.getId()) {
+                                            case R.id.radioButton6h:
+                                                newSync.setInterval(360); // Minutes
+                                                break;
+                                            case R.id.radioButton12h:
+                                                newSync.setInterval(720);
+                                                break;
+                                            case R.id.radioButton24h:
+                                                newSync.setInterval(1440);
+                                                break;
+                                            case R.id.radioButton48h:
+                                                newSync.setInterval(2880);
+                                                break;
+                                            case R.id.radioButton7j:
+                                                newSync.setInterval(10080);
+                                                break;
+                                            case R.id.radioButton15j:
+                                                newSync.setInterval(21600);
+                                                break;
+                                            case R.id.radioButton30j:
+                                                newSync.setInterval(43200);
+                                                break;
+                                        }
+
+                                        newSync.setDateCreated(new Date());
+                                        newSync.setActive(true);
+
+                                        if(nameIsOk) {
+                                            Log.d(TAG, "Registering new Sync : " + newSync.toString());
+                                            DB.executeTransaction(new Realm.Transaction() {
+                                                @Override
+                                                public void execute(Realm realm) {
+                                                    newSync.getAccount().getSyncs().add(newSync);
+                                                    mAdapter.notifyNewSync(newSync);
+                                                    mEmptyView.setVisibility(View.GONE);
+                                                    mRecyclerView.setVisibility(View.VISIBLE);
+                                                    Bundle syncSettings = new Bundle();
+                                                    syncSettings.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true); //Force manual sync
+                                                    syncSettings.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true); //Force sync to start instantly
+                                                    ContentResolver.requestSync(mAccount, AUTHORITY, syncSettings);
+                                                }
+                                            });
+                                            dialog.dismiss();
+                                        }else{
+                                            Toast.makeText(getContext(), R.string.invalid_sync_name, Toast.LENGTH_LONG).show();
+                                        }
+
                                     }
-
-                                    Sync res = DB.where(Sync.class).equalTo("name", name.getText().toString()).findFirst();
-                                    if (res != null) { //TODO Test this
-                                        Toast.makeText(getContext(), R.string.name_already_taken, Toast.LENGTH_LONG).show();
-                                        dialog.show();
-                                        nameIsOk = false;
-                                    }
-
-                                    Log.d(TAG, "Results | Name: " + name.getText().toString() + ", NetType: " + checkedNetType.getText() + ", Freq: " + checkedFrequency.getText());
-
-                                    newSync.setName(name.getText().toString());
-                                    Log.d(TAG, "Radiobutton id : " + checkedFrequency.getId());
-
-                                    switch (checkedNetType.getId()) {
-                                        case R.id.radioButton_WiFi:
-                                            newSync.setNetworkType(Sync.NET_TYPE.WIFI);
-                                            break;
-                                        case R.id.radioButton_WiFi_Data:
-                                            newSync.setNetworkType(Sync.NET_TYPE.WIFIDATA);
-                                            break;
-                                    }
-
-                                    switch (charging.getId()) {
-                                        case R.id.radioButton_charging:
-                                            newSync.setChargingOnly(true);
-                                            break;
-                                        case R.id.radioButton_battery:
-                                            newSync.setChargingOnly(false);
-                                            break;
-                                    }
-
-                                    switch (checkedFrequency.getId()) {
-                                        case R.id.radioButton6h:
-                                            newSync.setInterval(360); // Minutes
-                                            break;
-                                        case R.id.radioButton12h:
-                                            newSync.setInterval(720);
-                                            break;
-                                        case R.id.radioButton24h:
-                                            newSync.setInterval(1440);
-                                            break;
-                                        case R.id.radioButton48h:
-                                            newSync.setInterval(2880);
-                                            break;
-                                        case R.id.radioButton7j:
-                                            newSync.setInterval(10080);
-                                            break;
-                                        case R.id.radioButton15j:
-                                            newSync.setInterval(21600);
-                                            break;
-                                        case R.id.radioButton30j:
-                                            newSync.setInterval(43200);
-                                            break;
-                                    }
-
-                                    newSync.setDateCreated(new Date());
-                                    newSync.setActive(true);
-
-                                    if(nameIsOk) {
-                                        Log.d(TAG, "Registering new Sync : " + newSync.toString());
-                                        DB.executeTransaction(new Realm.Transaction() {
-                                            @Override
-                                            public void execute(Realm realm) {
-                                                newSync.getAccount().getSyncs().add(newSync);
-                                                mAdapter.notifyNewSync(newSync);
-                                                mEmptyView.setVisibility(View.GONE);
-                                                mRecyclerView.setVisibility(View.VISIBLE);
-                                                Bundle syncSettings = new Bundle();
-                                                syncSettings.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true); //Force manual sync
-                                                syncSettings.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true); //Force sync to start instantly
-                                                ContentResolver.requestSync(mAccount, AUTHORITY, syncSettings);
-                                            }
-                                        });
+                                })
+                                .onNegative(new MaterialDialog.SingleButtonCallback() {
+                                    @Override
+                                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
                                         dialog.dismiss();
-                                    }else{
-                                        Toast.makeText(getContext(), R.string.invalid_sync_name, Toast.LENGTH_LONG).show();
                                     }
-
-                                }
-                            })
-                            .onNegative(new MaterialDialog.SingleButtonCallback() {
-                                @Override
-                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                    dialog.dismiss();
-                                }
-                            }).build();
+                                }).build();
+                    }
                 }
             }
         });
@@ -417,7 +470,6 @@ public class Syncs extends Fragment {
                     isReselectingFolder = false;
                 }
             }
-            Log.d(TAG, "onActivityResult: ");
         }
     }
 

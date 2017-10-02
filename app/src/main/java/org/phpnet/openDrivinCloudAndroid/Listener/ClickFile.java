@@ -3,6 +3,7 @@ package org.phpnet.openDrivinCloudAndroid.Listener;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 
 import org.phpnet.openDrivinCloudAndroid.Activities.AcceuilActivity;
 import org.phpnet.openDrivinCloudAndroid.Common.CurrentUser;
@@ -14,7 +15,7 @@ import java.io.IOException;
  * Created by germaine on 01/07/15.
  */
 public class ClickFile {
-
+    private static final String TAG = "ClickFile";
     //Chememin du fichier dans le drive
     private String URL;
 
@@ -42,6 +43,7 @@ public class ClickFile {
                     CurrentUser curr = CurrentUser.getInstance();
                     file = new File(curr.appDir + name);
                     file.createNewFile();
+                    Log.d(TAG, "run: Downloaded file will be : "+file.getAbsolutePath());
                     file.setReadable(true, false);
                     curr.wdr.getMethod(URL, file);
                 } catch (IOException e) {
@@ -54,6 +56,7 @@ public class ClickFile {
 
     public void onClickFile() {
         try {
+            Log.d(TAG, "onClickFile: Downloading "+URL+"/"+name+" to "+file);
             Thread threadDownload = new Thread(getRunDownload());
             threadDownload.start();
             threadDownload.join();
@@ -62,6 +65,8 @@ public class ClickFile {
         }
 
         Uri path = Uri.fromFile(file);
+
+        Log.d(TAG, "onClickFile: Finished download of "+path);
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setDataAndType(path, mmie);
 

@@ -15,6 +15,10 @@ import org.phpnet.openDrivinCloudAndroid.Common.Decode;
 import org.phpnet.openDrivinCloudAndroid.R;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
@@ -94,9 +98,10 @@ public class ClickMove {
         public void run() {
             try {
                 CurrentUser currentUser = CurrentUser.getInstance();
-                String path = currentUser.currentDirURL() + filesDouble.get(0).name;
-                String source = currentUser.getCurrentDirMoveURL() + filesDouble.get(0).name;
-                String destination = currentUser.currentDirURL() + filesDouble.get(0).name;
+                String currentDirUrl = URLDecoder.decode(currentUser.currentDirURL().toString(), "UTF-8");
+                String path = currentDirUrl + "/" + filesDouble.get(0).name;
+                String source = currentUser.getCurrentDirMoveURL() + "/" + filesDouble.get(0).name;
+                String destination = currentDirUrl + "/" + filesDouble.get(0).name;
                 String tmpDir = currentUser.serverURL.toString() + new Date().getTime() + "/";
                 currentUser.wdr.mkcolMethod(tmpDir);
                 currentUser.wdr.moveMethod(source, tmpDir + filesDouble.get(0).name);
@@ -173,11 +178,17 @@ public class ClickMove {
             @Override
             public void run() {
                 CurrentUser currentUser = CurrentUser.getInstance();
-                String source = currentUser.getCurrentDirMoveURL() + fileSelected.name;
-                String destination = null;
-                destination = currentUser.currentDirURL() + fileSelected.name;
                 try {
+                    String source = URLDecoder.decode(currentUser.getCurrentDirMoveURL(), "UTF-8") + "/" + fileSelected.name;
+                    String destination = null;
+                    destination = URLDecoder.decode(currentUser.currentDirURL().toString(), "UTF-8") + "/" + fileSelected.name;
+
+
+                    Log.d(TAG, "run: MOVEMETHOD "+source+" "+destination);
                     currentUser.wdr.moveMethod(source, destination);
+                    Log.d(TAG, "run: MOVEMETHOD Got response ["+currentUser.wdr.getStatusCode()+"] "+currentUser.wdr.getStatusMessage());
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -67,12 +67,13 @@ public class ClickDownload {
             public void cancel() {
                 Log.d(TAG, "cancel: Received cancel event");
             }
+
+            @Override
+            public void complete() {}
         });
         Log.d(TAG, "downloadFile: Starting download of file "+urlFile);
         dl.createNotification(context, nameFile, context.getString(R.string.downloading), context.getString(R.string.download_finished), context.getString(R.string.download_canceled), R.drawable.ic_drivincloud_notificon);
         dl.execute();
-
-
     }
 
 

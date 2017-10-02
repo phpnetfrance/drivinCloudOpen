@@ -1,9 +1,13 @@
 package org.phpnet.openDrivinCloudAndroid;
 
 import android.content.Context;
+import android.os.StrictMode;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 import android.support.v7.app.AppCompatDelegate;
+
+import com.facebook.stetho.Stetho;
+import com.uphyca.stetho_realm.RealmInspectorModulesProvider;
 
 import org.acra.ACRA;
 import org.acra.annotation.ReportsCrashes;
@@ -40,6 +44,15 @@ public class DrivinCloudOpen extends MultiDexApplication {
         Realm.setDefaultConfiguration(realmConfiguration);
 
         ACRA.init(this);
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+                        .build());
+
+        //Remove file uri exposure check
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
     }
 
     public static DrivinCloudOpen getInstance(){

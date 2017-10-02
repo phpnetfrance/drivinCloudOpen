@@ -183,6 +183,7 @@ public class DrivinCloudDownload extends AsyncTask<Void, Integer, Integer>{
                     Log.d(TAG, "download: File download finished ("+url+")");
                     //TODO Report modification time on the local file
                     saved = true;
+                    broadcastComplete();
                     get.releaseConnection();
                 }
 
@@ -265,6 +266,13 @@ public class DrivinCloudDownload extends AsyncTask<Void, Integer, Integer>{
         }
     }
 
+    private void broadcastComplete(){
+        for (DownloadListener l:
+            listeners) {
+            l.complete();
+        }
+    }
+
     public void cancel(){
         cancelDownload.set(true);
         //Update notification
@@ -294,6 +302,7 @@ public class DrivinCloudDownload extends AsyncTask<Void, Integer, Integer>{
     public interface DownloadListener{
         void progress(long downloadedBytes, long totalBytes, String url);
         void cancel();
+        void complete();
     }
 
     @Override
