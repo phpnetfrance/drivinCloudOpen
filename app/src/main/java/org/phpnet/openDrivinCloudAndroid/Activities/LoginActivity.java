@@ -353,8 +353,6 @@ public class LoginActivity extends AppCompatActivity {
             if (this.getArguments().getInt(ARG_SECTION_NUMBER, 2) == 2) { //Show login page
                 rootView = inflater.inflate(R.layout.fragment_main_auth_new, container, false);
                 Button connectButton = (Button) rootView.findViewById(R.id.btn_login);
-                TextView createAccount = (TextView) rootView.findViewById(R.id.create_account_link);
-                createAccount.setMovementMethod(LinkMovementMethod.getInstance());
                 Spinner useSSLSpinner = (Spinner) rootView.findViewById(R.id.input_login_ssl);
                 ArrayAdapter<CharSequence> sslAdapter = ArrayAdapter.createFromResource(this.getContext(), R.array.login_ssl_choices, android.R.layout.simple_spinner_item);
                 sslAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

@@ -82,8 +82,7 @@ public class AcceuilActivity extends AppCompatActivity
     private static final String TAG = AcceuilActivity.class.getSimpleName();
 
     private static final int FILE_UPLOAD_REQUEST_CODE = 42;
-    private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE_FOR_SYNC = 46623;
-    private static final int PERMISSION_GRANT_REQUEST_CODE_FILECHOOSER = 6357;
+    public static final int PERMISSION_GRANT_REQUEST_CODE_FILECHOOSER = 6357;
     private static Context context;
     private static AcceuilActivity activity;
     private Menu menu;

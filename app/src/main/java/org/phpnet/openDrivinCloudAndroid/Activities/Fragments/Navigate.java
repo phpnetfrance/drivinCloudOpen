@@ -1,19 +1,23 @@
 package org.phpnet.openDrivinCloudAndroid.Activities.Fragments;
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.LoaderManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.content.res.AppCompatResources;
@@ -23,6 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -56,6 +61,7 @@ public class Navigate extends Fragment implements AdapterView.OnItemLongClickLis
     private static final String TAG = "Navigate";
     private static final int DIALOG_REQUEST_CODE = 65421868;
     public static final String LOADER_CONFIG_SORT = "sort";
+    private static final int REQEST_PERMISSION_WRITE_EXT_STORAGE = 2719;
     private SwipeRefreshLayout swipeRefreshLayout;
     private ArrayList<MyFile> listFile;
     private SharedPreferences sharedPref;
@@ -313,7 +319,14 @@ public class Navigate extends Fragment implements AdapterView.OnItemLongClickLis
                     break;
                 default:
                     //new ClickFile(item.pathURL + item.name, item.name, item.getMimeType()).onClickFile();
-                    ClickDownload.getInstance().onClickDownload(item);
+                    boolean canWriteExtStorage = (ContextCompat.checkSelfPermission(this.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) == PackageManager.PERMISSION_GRANTED;
+                    if(canWriteExtStorage) {
+                        ClickDownload.getInstance().onClickDownload(item);
+                    }else{
+                        ActivityCompat.requestPermissions(this.getActivity(),
+                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                REQEST_PERMISSION_WRITE_EXT_STORAGE);
+                    }
             }
         }
     }
@@ -353,7 +366,15 @@ public class Navigate extends Fragment implements AdapterView.OnItemLongClickLis
                     .onPositive(new MaterialDialog.SingleButtonCallback() {
                         @Override
                         public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                            ClickDownload.getInstance().onClickDownload(file);
+                            //new ClickFile(item.pathURL + item.name, item.name, item.getMimeType()).onClickFile();
+                            boolean canWriteExtStorage = (ContextCompat.checkSelfPermission(Navigate.this.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) == PackageManager.PERMISSION_GRANTED;
+                            if(canWriteExtStorage) {
+                                ClickDownload.getInstance().onClickDownload(file);
+                            }else{
+                                ActivityCompat.requestPermissions(Navigate.this.getActivity(),
+                                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                        REQEST_PERMISSION_WRITE_EXT_STORAGE);
+                            }
                         }
                     }).show();
         }
@@ -379,55 +400,64 @@ public class Navigate extends Fragment implements AdapterView.OnItemLongClickLis
      * @param intExt
      */
     private void doOpen(final MyFile file, final selectOption intExt) {
-        final File target = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath()+"/"+file.name);
-        DrivinCloudDownload dl = new DrivinCloudDownload(file.pathURL.buildUpon().appendPath(file.name).toString(), target);
-        dl.addDownloadListener(new DrivinCloudDownload.DownloadListener() {
-            @Override
-            public void progress(long downloadedBytes, long totalBytes, String url) {
-                Log.d(TAG, "progress: "+downloadedBytes+"/"+totalBytes+" ("+((float)downloadedBytes/totalBytes)*100+"%"+")");
-            }
-
-            @Override
-            public void cancel() {
-                Log.d(TAG, "cancel: Received cancel event");
-            }
-
-            @Override
-            public void complete() {
-                Log.d(TAG, "complete: Received complete event, opening file");
-                switch (file.getTypeFile()) {
-                    case IMG:
-                        if (intExt == selectOption.INTERNAL) {
-                            getContext().startActivity(new Intent(getContext(), ImageActivity.class));
-                        } else if (intExt == selectOption.EXTERNAL) {
-                            //new ClickFile(file.pathURL + "/" + file.name, file.name, file.getMimeType()).onClickFile();
-                            Intent intent = new Intent(Intent.ACTION_VIEW);
-                            intent.setDataAndType(Uri.fromFile(target), file.getMimeType());
-
-                            try {
-                                AcceuilActivity.getContext().startActivity(intent);
-                            } catch (ActivityNotFoundException e) {
-                                CurrentUser.getInstance().showToast(AcceuilActivity.getContext(), "Aucune application disponible pour visionner le fichier.");
-                            }
-                        }
-                        break;
-                    case TXT:
-                        if (intExt == selectOption.INTERNAL) {
-                            Intent intent = new Intent(getContext(), EditActivity.class);
-                            intent.putExtra("URL", file.pathURL.buildUpon().appendPath(file.name).build().toString());
-                            getActivity().finish();
-                            getContext().startActivity(intent);
-                        } else if (intExt == selectOption.EXTERNAL) {
-                            new ClickFile(file.pathURL + "/" + file.name, file.name, file.getMimeType()).onClickFile();
-                        }
+        //new ClickFile(item.pathURL + item.name, item.name, item.getMimeType()).onClickFile();
+        boolean canWriteExtStorage = (ContextCompat.checkSelfPermission(this.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) == PackageManager.PERMISSION_GRANTED;
+        if(canWriteExtStorage) {
+            final File target = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath()+"/"+file.name);
+            DrivinCloudDownload dl = new DrivinCloudDownload(file.pathURL.buildUpon().appendPath(file.name).toString(), target);
+            dl.addDownloadListener(new DrivinCloudDownload.DownloadListener() {
+                @Override
+                public void progress(long downloadedBytes, long totalBytes, String url) {
+                    Log.d(TAG, "progress: "+downloadedBytes+"/"+totalBytes+" ("+((float)downloadedBytes/totalBytes)*100+"%"+")");
                 }
-            }
+
+                @Override
+                public void cancel() {
+                    Log.d(TAG, "cancel: Received cancel event");
+                }
+
+                @Override
+                public void complete() {
+                    Log.d(TAG, "complete: Received complete event, opening file");
+                    switch (file.getTypeFile()) {
+                        case IMG:
+                            if (intExt == selectOption.INTERNAL) {
+                                getContext().startActivity(new Intent(getContext(), ImageActivity.class));
+                            } else if (intExt == selectOption.EXTERNAL) {
+                                //new ClickFile(file.pathURL + "/" + file.name, file.name, file.getMimeType()).onClickFile();
+                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                intent.setDataAndType(Uri.fromFile(target), file.getMimeType());
+
+                                try {
+                                    AcceuilActivity.getContext().startActivity(intent);
+                                } catch (ActivityNotFoundException e) {
+                                    CurrentUser.getInstance().showToast(AcceuilActivity.getContext(), "Aucune application disponible pour visionner le fichier.");
+                                }
+                            }
+                            break;
+                        case TXT:
+                            if (intExt == selectOption.INTERNAL) {
+                                Intent intent = new Intent(getContext(), EditActivity.class);
+                                intent.putExtra("URL", file.pathURL.buildUpon().appendPath(file.name).build().toString());
+                                getActivity().finish();
+                                getContext().startActivity(intent);
+                            } else if (intExt == selectOption.EXTERNAL) {
+                                new ClickFile(file.pathURL + "/" + file.name, file.name, file.getMimeType()).onClickFile();
+                            }
+                    }
+                }
 
 
-        });
-        Log.d(TAG, "downloadFile: Starting download of file "+file.pathURL);
-        dl.createNotification(getContext(), file.name, getContext().getString(R.string.downloading), getContext().getString(R.string.download_finished), getContext().getString(R.string.download_canceled), R.drawable.ic_drivincloud_notificon);
-        dl.execute();
+            });
+            Log.d(TAG, "downloadFile: Starting download of file "+file.pathURL);
+            dl.createNotification(getContext(), file.name, getContext().getString(R.string.downloading), getContext().getString(R.string.download_finished), getContext().getString(R.string.download_canceled), R.drawable.ic_drivincloud_notificon);
+            dl.execute();
+        }else{
+            Toast.makeText(getContext(), "Vous devez autoriser l'application à enregistrer ce fichier", Toast.LENGTH_LONG).show();
+            ActivityCompat.requestPermissions(this.getActivity(),
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQEST_PERMISSION_WRITE_EXT_STORAGE);
+        }
     }
 
     @Override
