@@ -5,12 +5,13 @@ android {
     compileSdkVersion 25
     buildToolsVersion '25.0.2'
     android.defaultConfig.vectorDrawables.useSupportLibrary = true;
+
     defaultConfig {
         applicationId "org.phpnet.openDrivinCloudAndroid"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 14
-        versionName "RC1.12-beta"
+        versionCode 15
+        versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "org.phpnet.openDrivinCloudAndroid.TestRunner"
     }
