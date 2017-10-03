@@ -1,4 +1,4 @@
-<p align="center"><img src="https://cdn.rawgit.com/phpnetfrance/drivinCloudOpen/678ec81374131000610b7f955470b9e8ebed5d52/res-readme/logo.svg"></p>
+<p align="center"><img src="https://github.com/phpnetfrance/drivinCloudOpen/blob/4b7979c0e2a2791e79874302ee8d861fd2ef54d7/res-readme/logo.svg"></p>
 
 ## Basic Overview
 drivinCloud Open is an android webdav client
