@@ -13,7 +13,8 @@ drivinCloud Open is an android webdav client
 - File upload
 
 ## Getting the app
-Coming next
+Google Play Store : https://play.google.com/store/apps/details?id=org.phpnet.openDrivinCloudAndroid
+Apk download : https://github.com/phpnetfrance/drivinCloudOpen/releases/download/1.0/drivinCloudOpen-1.0.apk
 
 ## Project Setup
 This project is made using android studio. You can import the project in android studio easily :
